@@ -1,0 +1,162 @@
+Rejected subjects log — السعودية section
+Maintained by writer, informed by reviewer. Not a CLAUDE.md rule, just a memory aid
+to stop re-deriving the same dead ends across writer-instance restarts.
+Format: subject — reason rejected — (batch/row context if known)
+
+- الورد الطائفي (Taif rose) — answer is structurally unfixable: you can't identify it
+  without naming الطائف (gives الطائفي) or الورد/ماء الورد (gives الورد). Rejected twice
+  (originally as row 29 in batch 1; again when reworded in batch 16/row 209). Do not retry.
+- Hajj-month question — written as a batch-1 replacement attempt after الورد الطائفي was
+  dropped; dropped itself for being off-scope (true independently of Saudi Arabia, not a
+  Saudi-specific fact). NOTE: خادم الحرمين الشريفين is NOT rejected — it is the approved
+  row that successfully replaced it (row 29, approved, answer to the king's title question).
+  Do not confuse the two; only the Hajj-month question belongs on this list.
+- زمزم well's name ("what is this well called") — off-scope, same reasoning as Hajj month.
+  Reworked in batch 13 into a question about شركة المياه الوطنية (the state operator of
+  the King Abdullah Zamzam Water Project) instead — THAT version is approved (row 184).
+- درب زبيدة, خط سكة حديد الحجاز (Hijaz Railway) — pre-Saudi, trans-national Ottoman/Abbasid
+  era projects mostly outside modern Saudi territory; belong in تاريخ, not السعودية.
+- وزارة الداخلية, الخطوط السعودية, STC (الاتصالات السعودية), SEC (الشركة السعودية للكهرباء),
+  GASTAT (الهيئة العامة للإحصاء) — self-describing-name trap: a body named for exactly
+  what it does can't be clued by its function ("the company that does X" → X-named company).
+  Pattern also killed draft attempts at the Competition Authority, Civil Aviation Authority,
+  and (separately) a Statistics Authority variant on renaming-trap grounds.
+- موسم جدة — template twin of approved row 110 (موسم الرياض); same "seasons" framing,
+  not distinct enough to coexist.
+- الهامور + hermaphroditism fact — belongs to عالم الحيوان section scope, not السعودية.
+- يبرين — alternate/variant name collides with an already-approved answer elsewhere.
+- الزامل (southern tribal chant/poetry) — dropped for being unsourceable (two WebFetch
+  attempts 404'd), not for a content reason. Could retry later with a working source.
+- "Saudi Arabia borders N countries" — dropped for being unsourceable cleanly; one fetch
+  gave an incomplete-looking count of 5 (missing Qatar/UAE) that couldn't be trusted
+  against the commonly-cited 7. Never made it into the CSV.
+- مجلة المنهل as "first Saudi magazine" — dropped; source only supported a weaker claim
+  (first to reach a silver jubilee), not "first" outright. Could retry if a real source
+  for "first" surfaces.
+
+Capped clusters (do not add more rows to these categories):
+- UNESCO World Heritage Sites: 8 (مدائن صالح/الحِجر, الدرعية, جدة البلد, جبة, حمى,
+  واحة الأحساء, عروق بني معارض, قرية الفاو)
+- UNESCO Intangible Cultural Heritage: 3 so far, watch but not yet capped
+  (السدو 157, القط العسيري 187, سف الخوص 173)
+- Unification/state-founding battles: 7 (cap raised to 12 by human decision, 2026-10-04; each new battle needs a sourced date and a rival check)
+- Pre-1970 institutions and events: no cap (human decision, 2026-10-04); each needs a sourced date, a rival check for any "first" claim, and rule 6 spread
+- Universities: capped at 5 (جامعة الملك عبدالله/KAUST 94, الإسلامية 97, الأميرة نورة 143,
+  الملك فهد 162, الملك سعود 188)
+- Valleys (أودية): capped after وادي الرمة, وادي حنيفة, وادي الدواسر, وادي إبراهيم
+- Islands: capped after فرسان الكبرى, تاروت, أبو علي, شيبارة
+- Traditional dress: capped at 6 (البشت, العقال, الشيلة, العباءة, الغترة, الثوب)
+- Megaprojects (Vision 2030 giga-projects): capped at 8 (نيوم, القدية, مشروع البحر الأحمر,
+  أمالا, روشن, حديقة الملك سلمان, مدينة الملك عبدالله الاقتصادية, تروجينا)
+- Food and drink: capped at 10 (التمور, الهيل, الكبسة, اللقيمات, القديد, عجوة,
+  البن الخولاني, الدلة, المرقوق, الكرك)
+
+Confusable/mirror pairs to separate at xlsx build time (not duplicates, but a host
+reading both in the same sitting will notice):
+- row 31 العقال / row 194 الغترة (each question names the other's answer)
+- row 42 مشروع البحر الأحمر (giga-project) / row 192 البحر الأحمر (the sea itself)
+- row 17 / row 183 (both "which month" national-day-style questions)
+- row 58 جبال السروات / row 167 جبال طويق (both mountain ranges)
+- row 92 (قطار الحرمين by name) / row 189 (same train by length, name withheld) — near-
+  identical descriptive clauses
+- row 161 وادي حنيفة / row 180 وادي الدواسر (both Riyadh-region valleys, same question shape)
+- row 87 حديقة الملك سلمان / row 88 محمية الملك سلمان الملكية (both 300, will sort adjacent)
+- row 69 المسجد الحرام (largest by area) / row 80 المسجد النبوي (second by capacity) —
+  mixed metrics across an obvious pair
+- row 28 الطائف / row 209 الهدا — Taif-adjacent even with the climate clause removed
+- row 107 (first official radio broadcast, 1949) / row 213 (first official TV broadcast,
+  1965) — the broadcast pair, closest-in-shape of this group
+- row 112 (911) / row 205 (الدفاع المدني) / row 210 (الهلال الأحمر السعودي) — three
+  emergency-services rows (trio)
+- row 64 (سارة عطار, London 2012) / row 212 (أولمبياد ميونخ 1972, Saudi's Olympic debut) —
+  two Olympics rows
+- row 201 (نورة الفايز, deputy minister) / row 214 (1959, girls'-education authority
+  founding year) — the girls'-education pair
+- row 43 (أبها / عروس الجبال) / row 216 (جدة / عروس البحر الأحمر) — stronger than a shared
+  shape: row 43's question contains "عروس الجبال" verbatim, teaching the عروس construction
+  that row 216 then needs the player to supply unprompted. Keep these well separated in
+  the final ordering, not just logged as adjacent.
+- row 45 برج المملكة (triangular gap) / row 219 برج الفيصلية (glass sphere, Foster-designed)
+  — both iconic Riyadh towers, different distinguishing features, not a duplicate but
+  worth separating in final ordering.
+
+SAME-TIER CONFUSABLE PAIRS (higher priority than the mixed-tier adjacency list below,
+since points-sorting will NOT separate these — they'll land adjacent in the sheet):
+- row 125 (أول وزير خارجية → الأمير فيصل بن عبدالعزيز, 500) / row 220 (أول وزير دفاع →
+  الأمير منصور بن عبدالعزيز, 500) — near-verbatim question template, identical answer
+  shape (الأمير + name + بن عبدالعزيز), both 500. Row 126 (عبدالله السليمان, first finance
+  minister) makes it a trio of "first minister" rows, but its answer breaks the الأمير
+  pattern so it's less confusable. Top priority for separation in final ordering.
+- row 221 (ساما founding year, 1952) / row 222 (ساما's first governor, جورج بلويرز, 500)
+  — both SAMA rows, both 500, adjacent in file and sort. Three SAMA-related rows now
+  counting row 39 (100-level abbreviation).
+- row 123 (names الشريف حسين بن علي in its question) / row 228 (answers علي بن الحسين,
+  the same two names reversed — father/son) — NEW CATEGORY: not a shared template, not
+  a leak, but mirrored names that read as transpositions of each other. Both 500. Top
+  priority for separation alongside 125/220. Secondary note: row 123 also narrows row
+  228's answer to "one of Hussein's sons" via "وأبنائه", but doesn't make it derivable —
+  علي بن الحسين is genuinely obscure, so real but non-fatal information transfer.
+  Also: row 228's question dates the Hejaz annexation to 1925 (Ali's deposal) while row
+  122 answers 1926 (the bayah as king) — both correct, different events, but a player
+  hearing 1925 in one place may offer it for the other. Nothing to fix, just know it.
+
+LATIN-SCRIPT ANSWER PRECEDENT: row 218 (AMC) is the section's first non-Arabic-script
+answer — intentional, noted in its own row. Rule: when an equally-correct Arabic rendering
+exists for a fact (e.g. a Gregorian year, which could be written in Hijri instead),
+consistency with the rest of the column wins — use the form everything else uses. When no
+accepted Arabic form exists for the actual answer (a brand name nobody transliterates,
+like AMC), the script is forced by the subject, not a stylistic choice — keep it as-is
+and flag it in the note so lead/reviewer don't "correct" it later.
+
+"FIRST X" QUESTION-SHAPE OVERUSE — flagged once the count hit 34/~223 rows (~15% of
+the section, 18 of 62 approved 500s at the time, i.e. ~a third of the 500 tier). Not a
+rule violation (rule 6 is about subject spread, not question shape) but a real variety
+cost: a tier that opens "من هو أول..." / "ما اسم أول..." a third of the time plays as
+monotonous even though every fact is distinct. Root cause: the pre-1970 institutional
+lane (which never loses rows at Pass 2) most naturally produces "first institution of
+type X" questions, so leaning on that lane for 500s quietly concentrated the shape.
+Going forward, stay in the pre-1970 institutional lane for sourcing reliability but
+VARY THE SHAPE. Alternatives already proven in the file, with examples to imitate:
+- what something was called BEFORE a rename — row 101 كاسوك (Aramco's name pre-1944)
+- what a thing was renamed TO — row 129 ميناء الملك عبدالعزيز (Dammam port after 1960)
+- who COMMANDED an action (not "who was first") — row 120
+- who was the LAST of something (آخر, not أول) — row 121 محمد بن طلال, the only "آخر"
+  row in the section so far; a nice inversion worth repeating
+- what agreement/treaty SETTLED a specific dispute — rows 52, 176
+- what a specification/figure WAS (weight, measurement) — row 104
+- which body PRECEDED which (succession, not origin) — row 124
+- what year something ENDED — row 57 (the neutral zone's legal end)
+Before drafting a new 500 in this lane, check whether "أول"/"من هو أول" is about to be
+the opening words again — if so, try recasting as one of the above shapes first.
+
+RENAME-SHAPE REFINEMENT (from row 225): the "what was it called before/after" pattern
+works cleanest when the old and new names share NO words — row 101 is the model
+(أرامكو السعودية in the question, كاسوك as the answer, zero overlap). It's thin when the
+old name contains the new one as a substring, because the shared base name then sits in
+the question and hands over most of the answer's words for free — row 225 (وزارة الدفاع
+→ وزارة الدفاع والطيران) only survives because الطيران is still the one truly untested
+element and everything else is forced by the subject, not by choice. Also: this pattern
+interacts badly with the 4-word answer cap — a renamed body's FULL official name can
+easily run 5 words (وزارة الدفاع والطيران والمفتشية العامة did), forcing a shortened
+answer that may be meaningfully easier than the full name, pulling the tier down a notch
+(500→300 happened on row 225 for exactly this reason). Check word count AND difficulty
+together before committing to which form of a multi-part official name is the answer.
+
+SELF-DESCRIBING-NAME TRAP — now the most common single defect (7 rows killed by it:
+وزارة الداخلية, الخطوط السعودية, STC, SEC, GASTAT, بطاقة الهوية الوطنية, الرئاسة العامة
+لتعليم البنات in its first draft). Pre-empt it at draft time: before writing any row
+whose answer is an organisation, document or authority, write the answer down and ask
+whether the question's description is just that name paraphrased. If yes, either (a)
+move the blank to a date/figure instead of the name (works when the fact is otherwise
+solid — see row 214's fix), (b) attribute a claim instead of asserting it (row 199's
+"وفق موسوعة غينيس" pattern), or (c) pick a different entity whose name isn't its function
+— سابك, إثراء, نزاهة, الدفاع المدني, الهلال الأحمر all cleared for exactly that reason.
+
+"First Saudi woman to..." template shape (not duplicates, just a repeated shape to
+watch): row 63 (ريما بنت بندر, first ambassador), row 64 (سارة عطار, first Olympic
+athlete), row 201 (نورة الفايز, first deputy minister) — plus row 44 (سلطان بن سلمان,
+first astronaut) as a nearby first-of-category row.
+
+Sweep-candidates (reviewer flagged these as possibly worth a future difficulty
+re-sweep, not yet acted on): rows 167, 179, 180, 199, 227 (الجنادرية — highly recognisable
+for 34 years but wound down after 2018; took the harder 300 tier-break for now).
