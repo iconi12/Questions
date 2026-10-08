@@ -5,8 +5,8 @@ Write Arabic trivia questions for every section listed in `sections.md`, review 
 Each question has: section, question, answer, points (100 / 300 / 500).
 
 ## Roles
-- **writer** (Sonnet): writes questions. The ONLY agent allowed to create or edit files.
-- **reviewer** (Opus): reads and checks. NEVER edits any file — sends feedback to writer by message.
+- **writer** (Sonnet 5.5): writes questions. The ONLY agent allowed to create or edit files.
+- **reviewer** (Opus 5.5): reads and checks. NEVER edits any file — sends feedback to writer by message.
 - **lead**: coordinates sections and builds `questions.xlsx` at the end.
 
 ## Files
@@ -27,7 +27,7 @@ Each question has: section, question, answer, points (100 / 300 / 500).
 Imagine 10 random Saudi adults hearing the question:
 - **100** — 7 or more of them would answer correctly.
 - **300** — about 3–4 would answer correctly; needs interest in the topic.
-- **500** — 1 or fewer would answer correctly; needs specialist knowledge or serious fandom.
+- **500** — 2 or fewer would answer correctly; needs specialist knowledge or serious fandom.
 - When unsure between two levels, choose the harder question, not the easier one.
 - A 500 question must be hard because of the knowledge it needs, not because of confusing wording.
 
@@ -94,6 +94,35 @@ Converged on by writer and reviewer through 158 approved rows (2026-10-01). Thes
 **Process:**
 - Read level breakdowns out of the file rather than deriving them from a previous message. A wrong breakdown that sums correctly is the easiest kind to miss.
 - Approved rows are frozen by default; reopening one is reserved for structural problems (e.g. an approved answer is a common name, like a king, that keeps colliding with new rows' required context) — not for optional polish.
+
+### Operational heuristics — كاس العالم (from human spot-check, 2026-10-08)
+
+**Difficulty / clueing (Pass 2 + Pass 3):**
+- Don't include an identifying hint (nationality, club affiliation, team name) that isn't needed for a single interpretation and that pushes the question below its tier's intended difficulty. If the match/teams are already named in the question, restating a player's nationality is redundant and an easy giveaway — drop it. Example: "...اللاعب الأرجنتيني الذي سجل هدف بلاده... في مباراتها أمام السعودية..." → drop "الأرجنتيني" once the match is already stated as السعودية-الأرجنتين.
+- Club-affiliation descriptors ("نجم برشلونة الشاب", "حارس مرمى الهلال") that aren't needed to pin down who's being asked about make a 100-level question too easy — cut them so the player has to know the World Cup moment itself, not just recognize a famous club name.
+- On a notorious/iconic incident (a famous foul, bite, miss), check whether a "flavor" clue (team name, nationality) is doing work the incident's own fame should already be doing. If the incident alone is identifying, cut the clue — keep the points unchanged.
+- Don't bury the actual subject behind a secondary participant's action. Ask directly for the who/what/how many/when of the event itself ("من اللاعب الذي أضاع ركلة جزاء في مباراة فرنسا والمغرب بكأس العالم 2026؟") rather than wrapping it around what someone else did to them ("نجم فرنسا الذي تصدى [الخصم] لركلة جزاء سددها").
+
+**Concision (rule 8):**
+- Drop confirmation/announcement dates that don't narrow the answer (e.g. "التي أكد الفيفا في ديسمبر 2024م أنها ستستضيف..." → "من هي الدولة التي ستستضيف كأس العالم 2034؟"). Ask for the fact directly.
+
+**Scope:**
+- A كاس العالم question must be about the match, tournament, players, or records themselves — not a participating country's own domestic/civic reaction to a result (e.g. a public-holiday announcement). That's out of scope entirely for this section, regardless of how it's worded.
+
+**Topic selection (Pass 3):**
+- Avoid trivial physical/design-detail trivia about the trophy or ceremony objects that doesn't answer a real who/what/how many/when about the tournament (e.g. "ما الشكل الذي يحمله اللاعبان المجسّدان في أعلى الكأس؟"). Prefer facts actually about the competition.
+
+**Anchor years (Pass 1 + Pass 2):**
+- Any "up to [year]" record/"only team to..." question must be anchored to the LATEST tournament actually covered by the section's content, not a stale earlier cutoff. Now that 2026 is covered, re-check every existing anchor-year superlative and update stale ones (e.g. "...حتى نسخة 2022م؟" for a still-true-in-2026 fact → "...حتى نسخة 2026م؟").
+
+**Facts must match the exact edition named (Pass 1):**
+- Verify the fact is true for the SPECIFIC tournament year stated, not just true in general. A real honor/award from one World Cup must not get reattributed to a different edition, especially when the same team/player appears in both — re-verify with search against the exact year before approving.
+
+**500-tier variety:**
+- Don't default every 500 to pre-1970/historical obscurity. Most current 500s cluster on very old history (1900s-era facts), which is one valid path but not the only one — and over-clustering on it violates rule 6 (spread across the topic).
+- A second valid path to 500: a small, exact, verifiable detail from a RECENT match that's hard to remember or notice even though it isn't old — e.g. naming the specific players who missed penalties in a shootout, who was subbed on at a specific minute, who conceded a specific own goal. These are hard because almost no one tracks that level of detail afterward, not because the event is obscure or old. Human's example: "من هم اللاعبين الذين أضاعوا ضربات الترجيح في مباراة كولومبيا وسويسرا في كأس العالم 2026؟"
+- When the answer to this style of question is a small set of multiple people (e.g. 2 players who both missed), that's fine and is NOT an "X or Y" violation of rule 2 — rule 2 bars uncertain/alternative answers, not a complete, exact, verifiable set. Keep the set small (2-3 max) and make sure every name in it is independently verified.
+- Apply this going forward on any NEW or backfill 500-point كاس العالم rows (including ones you write to replace a count lost from this resweep) — don't reopen already-approved 500s just to diversify them, that's optional polish, not a structural fix.
 
 ## Question rules
 1. Arabic (فصحى بسيطة), clear wording, only one possible interpretation.
