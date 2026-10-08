@@ -1,0 +1,535 @@
+LOOSENED 100-TIER BAR (human decision, 2026-10-08): a NEW row may count as
+100 if roughly 5-6 in 10 Saudi adults who WATCHED the WC on TV would know it
+(narrower, more engaged audience than "any Saudi adult" / general public).
+Still needs exactly one natural guess and no leaks; all existing caps still
+apply (English-player cap, Germany cap, etc.). Applies ONLY to new rows —
+nothing already approved is reopened or retiered under this standard.
+Tested against the drop pile same day: real captain-template drops (Moore,
+Rodri, Lahm, Matthäus, Cannavaro) and the ceremony lane (Will Smith,
+Jungkook) were all retried and DROPPED AGAIN — even 5-6/10 WC-watchers
+can't name a captain who isn't Maradona-tier famous, or a ceremony
+performer. The loosened bar rescues genuine "common WC-watcher knowledge"
+gaps (a host country, a famous final's venue, a star's goal against Saudi
+specifically) — it does NOT rescue a shape that already failed on fame
+level under the strict bar; re-testing confirmed the drop piles for both
+the captain-template and the ceremony lane are exhausted, don't retry them
+again under any future bar change either.
+
+Rejected subjects / confusable-pairs log — كاس العالم section
+Maintained by writer, informed by reviewer. Not a CLAUDE.md rule, just a memory aid
+to stop re-deriving the same dead ends across writer-instance restarts.
+Mirrors the pattern in scratch_rejected_subjects.txt (السعودية section).
+
+Scope rulings (2026-10-07, writer+reviewer agreement during the standards sweep):
+- FIFA governance/organization facts (HQ location, founding city/year, presidents,
+  elections) are OFF-SCOPE for كاس العالم — "FIFA World Cup history" means the
+  tournament, not the federation that runs it. Moved to معلومات عامة: تيكي تاكا
+  (style of play, not tournament-specific), نيجيريا "النسور الممتازة" (nickname,
+  not tournament-specific), مقر الفيفا في زيورخ, تأسيس الفيفا في باريس 1904 (500,
+  genuinely obscure), جياني إنفانتينو (300, underrated at 100), جواو هافيلانج
+  (500), روبير غيران (أول رئيس فيفا, 500), لون قميص المغرب الأحمر (true
+  independently of the tournament).
+- Exception: facts about organizing/choosing the WORLD CUP ITSELF stay in scope
+  even if FIFA-adjacent — e.g. the 1929 Barcelona conference that picked the first
+  host, or the conte Verde ship that carried teams to the first tournament. The
+  test is whether the fact is about the tournament's own history, not the
+  federation's administration.
+- Women's World Cup: IN SCOPE ("FIFA World Cup history" has no men's-only
+  restriction, and every women's-WC question says "للسيدات" explicitly so there's
+  no confusability). CAPPED AT 3 (human/reviewer ruling, 2026-10-07): China 1991
+  (first host), Japan 2011 (beat USA on penalties), Rapinoe 2019 (Golden Ball +
+  Boot). Do not add more without a strong reason to revisit the cap.
+
+Capped clusters / watch:
+- 2022 WC: 30 of 124 approved rows already touch this single edition (~24%).
+  Don't add more 2022-specific rows without a strong reason; prefer underused
+  editions.
+- 1994 WC: ~10 rows already. Same caution as 2022.
+- "Which team won year X" shape: already heavily represented in the pending
+  100-tier queue (lines 151,152,154,159,170,176,193-202 as of 2026-10-07) —
+  values as simple "winner recall" questions, fine individually, but don't let
+  this become the only shape used to fill the 100-tier gap. Vary with
+  score/opponent/manager/stadium framings too.
+
+Repeated-answer tracking (same team/person as answer across multiple rows —
+not inherently a problem, CLAUDE.md rule 5 is about duplicate FACTS not
+duplicate ANSWERS, but worth knowing before adding more):
+- البرازيل: "الأكثر تتويجاً" (approved, 100), "شارك في كل نسخة" (pending, 100),
+  "بطلة 2002 للمرة الخامسة" (pending, 100), "بطلة 1970، احتفظت بالكأس الأصلية"
+  (pending, 100) — four Brazil-as-answer rows (down from five: the 1962-retain
+  twin was dropped, see below). All four are genuinely distinct facts, not
+  same-shape, so no further cut planned — but don't add a fifth without a
+  strong reason.
+- الكاميرون: appears at "أول أفريقي يبلغ ربع النهائي 1990" (approved, 300),
+  "الأكثر مشاركة أفريقياً" (pending, 300), "خرج من 1982 دون خسارة" (pending, 500),
+  plus روجيه ميلا's corner-flag-dance row (approved, 300) is Cameroon-adjacent.
+  All distinct facts; watch before adding a fifth.
+- النمسا: "واندرتيم، حلّ رابعاً 1934" (approved, 500), "حلّ ثالثاً 1954 بفوزه على
+  الأوروغواي" (pending, 500) — two distinct Austria facts, same tier.
+- يوغوسلافيا: "نصف نهائي 1930" (approved, 500), "حلّ رابعاً 1962" (pending, 500)
+  — two distinct Yugoslavia facts, same tier. Both pairs (Austria/Yugoslavia)
+  are fine as-is (distinct events), just noting the repeat for spread-awareness.
+
+Same-shape "retained the title" twin — RESOLVED 2026-10-07: dropped the
+"البرازيل احتفظت بالكأس عام 1962" row entirely (was redundant with إيطاليا's
+"أول من يحتفظ باللقب" 1934 row, which is the historically distinct version —
+being FIRST to do it — and stays approved at 300). Don't re-add a plain
+"retained the title" fact for any other country without a genuinely distinct
+angle (e.g. tied to a record, a rule change, a controversy — not just the bare
+repeat-win fact).
+
+Confusable pairs to separate at final ordering (not duplicates, but will land
+near each other and a host reading both back-to-back will notice):
+- كين أستون inventing cards after the 1966 England-Argentina sending-off (500)
+  vs the "1970 was the first WC to use yellow/red cards" row (500, approved) —
+  different events (invention vs first use), not a leak, just keep apart.
+- مقر الفيفا في زيورخ (معلومات عامة) vs تأسيس الفيفا في باريس 1904 (معلومات عامة)
+  — both now FIFA-HQ-adjacent facts in the same section, will sort near each
+  other at the same tier (300/500).
+- إنفانتينو ("خلفاً لبلاتر", معلومات عامة) vs هافيلانج ("قبل أن يخلفه بلاتر",
+  معلومات عامة) — mirrored phrasing, both hinge on mentioning Blatter.
+- كوريا الجنوبية كمستضيف مشارك لليابان 2002 (300) vs "في أي قارة أُقيمت نسخة 2002"
+  (100, pass2_ok) — reviewer ruled this is NOT a leak (continent is 100-level
+  info, naming Japan teaches nothing new about it), but still worth keeping
+  apart in final ordering since they're thematically identical.
+- آيسلندا (أصغر دولة أوروبية سكاناً تتأهل, 300) vs كوراساو (أصغر دولة سكاناً
+  مطلقاً تتأهل 2026, 300) — same template shape ("smallest population to
+  qualify"), different scope (European vs absolute), not a duplicate but will
+  sort adjacent at the same tier.
+
+Clustering resolutions from the 2026-10-07 full backlog review (writer+reviewer,
+118 pass2_ok/pending rows): these shapes/subjects hit their cap this round —
+do not add more of the same without a genuinely distinct angle.
+- "Who won year X" (100-tier): capped. Kept 2006, 1986, 2014, 1998 (+ existing
+  approved ones). Dropped 1974, Brazil-2002, Brazil-1970, Italy-1982 duplicates
+  of this shape.
+- "ما نتيجة المباراة النهائية" (final score) shape: capped at 2 (1930 approved,
+  1998 kept at 300, 1958 kept at 500). Dropped the 2002-final-score and the
+  1974-final-score rows.
+- "حلّ رابعاً" (finished 4th) shape: capped at 2 (1970 Uruguay, 1986 Belgium).
+  Dropped 1938 Sweden, 1950 Spain, 1962 Yugoslavia, and the 1954 Austria
+  3rd-place row (which was also the second Austria 500 and part of the 1954
+  overload below).
+- 1954 World Cup: was heading to 9 rows across the file; trimmed to 7 by
+  dropping the Sebes/Hungary-final row (Puskás already covers 1954 Hungary)
+  and the Austria-3rd-place row above. Still heavy — do NOT add any more 1954
+  rows without a very strong reason.
+- "Most appearances" (continent-level) shape: capped at 2 (Mexico overall,
+  Cameroon-Africa). Dropped the Korea-Asia version (Korea already covered
+  elsewhere: approved 1954-conceded-16-goals row and the 2002 co-host row).
+- Mexico overload: dropped the "1986 host knocked out on penalties" row
+  (really a "who hosted 1986" fact, not genuinely 500-level).
+- 2022 overload (was 30/131 ≈ 23%): dropped the Ecuador–Qatar-opener row and
+  the Morocco-beat-Belgium row (Morocco 2022 already covered by the
+  semifinal-run and Hakimi/red-card rows). Do not add more 2022 rows for a
+  while.
+- أفضل الثوالث (best-third-placed-teams format): DROPPED — the question's own
+  wording ("not 1st or 2nd in group") hands over "3rd" directly, a
+  process-of-elimination-style self-answering question, not fixable by reword
+  without losing the fact.
+- المجموعات الثانية (1970s/80s second-round format): DROPPED — no single fixed
+  name exists in sources ("second round" / "second group stage" / "المرحلة
+  الثانية" used interchangeably), fails rule 2's single-short-answer
+  requirement. The approved 1986-knockout-returns row already covers this
+  format-history ground.
+- Zúñiga/Neymar 2014 back-injury incident: only ONE of the two angles (who did
+  it vs who it happened to) stays — kept Zúñiga (500, the harder/specialist
+  angle), dropped the Neymar (100) version. Don't write both angles of the same
+  incident as separate rows again.
+- Casillas (300): reworded to drop "في تاريخ بلاده" (leaked that Spain's 2010
+  win was a first, which approved row 20/21 already states) — now "ما اسم
+  حارس المرمى الذي رفع كأس العالم 2010م بصفته قائداً لمنتخب بلاده؟" without
+  naming Spain at all.
+
+100-tier batch #1 lessons (2026-10-07, reviewer review of 15 drafted rows):
+Verdict: 3 approved as-is, 5 retiered up (Beckham→300, 2006-host→300,
+1958-host→500, Zabivaka→500, Pickles→500), 7 dropped. Key takeaways for
+future batches:
+- CHECKLIST BEFORE DRAFTING: grep the approved rows for (a) your intended
+  ANSWER word and (b) any existing QUESTION that already contains your
+  intended answer's words. Two drops this round were exactly this: Belgium/
+  Owairan was a mirror-image duplicate of approved line 8 (checked against
+  line 27 only, missed line 8 — check ALL rows mentioning the subject, not
+  just the ones you remember), and both Golden Glove/Golden Ball "name the
+  award" rows were verbatim leaks because approved lines 7 and 23 already
+  spell out "جائزة الكرة الذهبية لأفضل لاعب" / "جائزة القفاز الذهبي لأفضل
+  حارس" inside their own questions.
+- "Who hosted year X" rows keep landing at 300+ (year-recall is a band above
+  recognition) and the shape itself hit template-overuse at just 2 kept
+  (2006, 1958) — don't add more bare host-naming rows for a while.
+- Award-NAME questions (what is award X called) are inherently leak-prone
+  against "who won award X in year Y" rows, which this file has many of.
+  Avoid writing a new "name this award" row without first confirming the
+  award's full name doesn't already appear inside an approved question.
+- Real 100s are: headline moments + mega-stars tied to a SPECIFIC, widely-
+  seen World Cup event. NOT: a year/host/award name by itself (those read as
+  100 to the writer but test as 300 to a non-fan). When in doubt, default to
+  300 rather than 100 for anything that isn't a flat "who won / who is this
+  star / what happened in this famous moment" question.
+- Mascot names: Zabivaka (Russian wolf, 2018) tested at 500 — a mascot's
+  specific name is specialist knowledge unless it's extremely marketed like
+  لعيب (2022, Gulf-proximity boosted recognition, stayed at 300). Don't
+  assume a mascot is 100 just because the tournament itself is well known.
+- Germany now capped implicitly: 3 Maradona rows is the explicit cap (don't
+  add a 4th); Germany's "4 titles" row got dropped because all four
+  individual years (1954, 1974, 1990, 2014) are already each covered by a
+  separate approved row, making the count row a pure recombination with no
+  new information — also a near-twin of Italy's "4 titles" row (109, same
+  answer shape). Lesson: before writing a "how many times has X won" row,
+  check whether literally all of the component years are already covered
+  individually — if so, the count adds nothing and will be cut.
+
+100-tier batch #2-3 lessons (2026-10-07, reviewer review of 15 more drafted rows):
+- THE CORE TEST for a real 100 (reviewer's four questions, apply before drafting):
+  1. Would someone who never watches football still know it from TV/news?
+  2. Is the answer a mega-name, a country, or a Saudi moment (not an award name,
+     ball name, mascot name, or company name — those are all fan-level and
+     consistently tested 300 this round: Panini, Eusébio, Jabulani, Klose,
+     Ronaldo's 5-WC record, UAE's 1990 fact all got bumped to 300; Gazza got
+     bumped to 500 since a British player's nickname means nothing to a Saudi
+     audience).
+  3. Does the question work without needing a year or number recalled?
+  4. Is there only one natural guess (a record invites equally-famous rivals
+     as guesses — Ronaldo's "first to score in 5 WCs" invited Messi as a
+     guess once Messi later matched the feat, which is part of why it tested
+     300 not 100 despite the 2022 anchor keeping the fact itself correct).
+- "Captain who lifted the trophy" template: CLOSED, exactly at Maradona
+  (100), Casillas (300), Cafu (300), Varela (500). Confirmed by dropping
+  Matthäus, Lahm, Bobby Moore, and Cannavaro — all real captains, all fail
+  the blurt test (no non-fan can name England's 1966 or Italy's 2006
+  captain). Maradona alone passes because HE personally is the household
+  name, not because "captain" is an easy category. Don't draft another
+  captain-lifts-trophy row for any other edition.
+- OPENING/CLOSING CEREMONY PERFORMERS: tried and failed (Jungkook, Morgan
+  Freeman both dropped — Freeman also had a P3 leak from naming Jungkook
+  directly in the question text, not just the note). The whole lane fails
+  the blurt test the same way the captain template did: "a K-pop member" or
+  "an American actor at a ceremony" requires having WATCHED that specific
+  ceremony — unlike Waka Waka, which passed because the SONG itself is
+  universally known independent of having watched anything. Self-dropped
+  Will Smith (2018 closing) too, before reviewer even reached it, applying
+  the same reasoning preemptively — "which actor performed at ceremony X"
+  is viewing-dependent regardless of how famous the actor is in general.
+  Don't draft more ceremony-performer rows; the hook needs to be the SONG
+  (if it's genuinely iconic on its own) or the moment, not "who performed."
+  CLOSED for every edition checked so far (2018, 2022, 2026) — the "who
+  performed/sang at the ceremony" shape itself is the problem, not any one
+  edition's lineup, so don't re-try it for 2010/2014 either.
+  2022 is also the most overloaded edition (~55 mentions) — new 2022 rows
+  need to be exceptional on their own merits even before the ceremony issue.
+- THE "BLURT TEST" for pattern (b) (2026-10-07): before drafting, say the
+  question out loud and ask what a non-fan would blurt out first. If that
+  blurt is the correct answer, it's a 100. If the blurt is a DIFFERENT
+  famous name (the tempting-wrong-answer shape), it's 300+ even if the
+  actual answer is also somewhat famous. This killed Milla (a non-fan asked
+  "oldest player ever to score at a WC" blurts "Ronaldo" — famous, played at
+  41 in 2026 — and is wrong). It ALSO killed the captain-template extensions
+  beyond Maradona: Matthäus, Lahm, Bobby Moore, and Cannavaro are all real,
+  correct captains, but none is a household name in Saudi Arabia, so a
+  non-fan has NO name to blurt at all for "who captained Germany/England/
+  Italy in year X" — that's not even a tempting-wrong-answer case, just a
+  blank. The pattern (b) template ("captain who lifted year X's trophy")
+  works ONLY for Maradona, and is otherwise CLOSED — already has Maradona
+  (100), Casillas (300), Cafu (300), Varela (500); don't add more editions
+  to it. The lesson generalizes: a question SHAPE that worked for one
+  legendary name does not transfer its fame to other, less iconic answers
+  in the same shape. Test each specific name's Saudi-household-name status
+  individually, every time — never copy a working shape onto a new person
+  without re-testing.
+- CHECKLIST ADDITION (2026-10-07): for ANY "record holder" row, search
+  "<record> 2026" specifically before drafting, not just the historical
+  record. Pelé's 1970 assist record (6) was broken by Michael Olise (7) at
+  2026 — dropped because the question's own framing ("صاحب الرقم القياسي")
+  makes the CURRENT holder the only correct answer, and a "حتى نسخة 2022م"
+  anchor can't rescue it when the underlying stat itself is soft for the
+  older era anyway (assist counts are only reliably recorded from 1966 on).
+  Same root cause as the Klose case. This is now a standing pre-draft step,
+  not optional.
+- RECORDS CAN GO STALE MID-REVIEW: Klose's all-time scoring record (16 goals)
+  was broken by Mbappé (22 goals, 2026) and passed by Messi (21) in the same
+  tournament. A record-holder question MUST be explicitly time-bounded
+  ("حتى نسخة ٢٠٢٢م") and should note the new record-holder isn't an accepted
+  answer. The CURRENT record holder (Mbappé, 22 goals, as of 2026) is itself
+  a strong, fresh, genuinely 100-level fact — write the NEW record as its own
+  row rather than only patching the old one.
+- "Only ever appearance" / "first and only" claims need a date anchor too —
+  UAE's 1990 WC debut being their only one needed "حتى نسخة 2026م" added once
+  2026 qualifying was decided (they lost the AFC playoff to Iraq and missed
+  out), otherwise the claim could go stale the moment a team re-qualifies.
+- UNIQUENESS CHECK for "Nth consecutive appearance" claims: dropped a row
+  claiming Saudi Arabia's 2026 WC was its "third consecutive appearance"
+  because Morocco and Tunisia ALSO made their third straight 2026 appearance
+  — the fact wasn't wrong, just not unique to the stated answer. Before using
+  an ordinal/streak framing, check whether other teams independently share
+  the exact same streak.
+- SELF-DESCRIBING-NAME LEAK (same pattern as the السعودية file's trap, now
+  confirmed in this section too): dropped "بخاخ التلاشي" (vanishing spray)
+  because the question's own description ("يرسم خط يتلاشى") just glosses the
+  Arabic name ("التلاشي" = vanishing) — and there's also no single fixed
+  Arabic term for it (rule 2 violation, sources mix "بخاخ/رغوة التلاشي").
+- SAME-MATCH, SAME-ANSWER is the dangerous combination — dropped the Zidane
+  Panenka-penalty row because it was a second 100-level row in the SAME match
+  (2006 final) with the SAME answer (Zidane) as the approved headbutt row;
+  reads as repetitive even though the facts are genuinely different. Contrast
+  with the Owen/Beckham pair (1998 R16, SAME match but DIFFERENT answers) —
+  that one stayed fine, because different people as the answer avoids the
+  "didn't I just answer this" feeling for the host.
+- CROSS-ROW LEAK via an attribute, not just a name: dropped van Persie's 2014
+  header-vs-Spain row because an approved row already asks "which team lost
+  5-1 to Netherlands and was eliminated in the 2014 group stage" → Spain —
+  naming "Netherlands scored against Spain" (or even just "حامل اللقب",
+  Spain's status as defending champions) handed that row's answer away. Any
+  new row about a famous goal/incident must be checked against whether an
+  existing row already identifies the LOSING/opposing side by a near-unique
+  description.
+
+Tone question settled, not rejected: أندريس إسكوبار (Colombian defender
+murdered in 1994 weeks after his own goal eliminated Colombia) was initially
+dropped by the reviewer on tone grounds (2026-10-07), but the human had
+already decided — in a message that crossed with the drop verdict — to
+include it, treated like any other historical WC event, normal review
+process. The row is back in staging\كاس العالم.csv at 300. Do NOT drop it
+again on tone grounds; that question is closed. Normal fact/tier/wording
+review still applies like any other row.
+
+100-tier batch #4 lessons (2026-10-07): of 8 rows drafted at 100, only 4 held
+(Messi penalty, holiday, Japan fans, USA-hosts-2026-final). Dropped/retiered:
+- كريستيانو رونالدو "scored in 6 WCs" (2026 update) — DROPPED outright as a
+  rephrased duplicate of the already-approved "first to score in 5 WCs, 2022"
+  row (234). Don't try to "refresh" an approved record row with a new number
+  by writing a SEPARATE row — if a record has been extended, either leave the
+  old (correctly time-anchored) row alone, or replace its text directly
+  (which restarts it at pending), but never run both the old and new number
+  as two different rows on the same record for the same player.
+- بلجيكا (eliminated host USA, 2026) → 300. Also now BELGIUM'S 3RD row
+  (with 80 and 205) — Belgium is now capped, don't add a 4th.
+- بيليه 17 عاماً (1958) → 300. "Pelé won it at 17" is one of the most-retold
+  WC facts among football fans specifically — exactly the "needs interest"
+  300 band, not bare recognition.
+REFINED 100-TEST (reviewer, 2026-10-07): before drafting a 100, ask "would a
+Saudi adult who does NOT follow football get this from general TV news
+alone?" Not "is this a famous/retold fact among fans" (that's the 300 test).
+A 100 is allowed one single obvious answer — simplicity is fine, the test is
+about AUDIENCE REACH not question difficulty-of-construction.
+Lanes reviewer flagged as likely to still hold 100s:
+- Ronaldo/Messi 2026 headline stories where the answer is a country or thing,
+  not a record/number (records consistently test 300, see above).
+- Saudi moments around 2022 beyond the holiday (not yet mined).
+- Universally known WC basics not yet used (NOT mascot names — those are 300,
+  per Zabivaka; VAR is already used).
+- Arab/Gulf WC "firsts" that got heavy Arab-TV coverage — Qatar-as-first-Arab-
+  host is covered, so look at Saudi or Morocco equivalents for 2026 instead.
+
+Schillaci (1990, Golden Boot + Golden Ball) and Rapinoe (166, 2019 Women's
+WC, same double) share the "won both awards same tournament" template —
+logged as a pair, different tournaments/genders so not a duplicate, just a
+shape to keep apart in final ordering.
+
+CLOSED, do not add more (2026-10-07):
+- 1930 edition: ~10 rows already (Uruguay host/champion, final score, Centenario
+  stadium dropped for this reason, Patenaude hat-trick, Conte Verde ship,
+  Barcelona conference, Langenus referee, Yugoslavia semifinal, etc.). No more
+  1930-anchored rows of any tier.
+- Jules Rimet trophy topic: full at 3 rows (naming Jules Rimet himself, Pickles
+  recovering it 1966, Lafleur designing it). The 1983 Rio theft was dropped —
+  both a 4th trophy row AND because "which Brazilian city" makes Rio the only
+  natural guess (P2 fail, tests as 300 not 500 for that reason alone).
+- Saudi-opponent lane: FULL at 11 rows (Germany 2002, Sweden 1994, Russia 2018,
+  Argentina 2022, Egypt 2018 ×2, Spain 2026, Cape Verde 2026, France 1998,
+  Uruguay 2026, plus Belgium inside line 8's own question text). Do not add a
+  12th without dropping one first.
+- Belgium as answer: FULL at 3 rows (lines 80, 205, and the 2026-vs-USA row).
+  Don't add a 4th Belgium-as-answer row.
+- الولايات المتحدة (USA) as answer: FULL at 5 rows (1994 host, 2002 QF,
+  1930 semifinal, 2026 final venue, 1950 Belo Horizonte upset over England).
+  Don't add a 6th.
+- 1950 edition: FULL at 5 rows (round-robin final, 4th-place finishes, the
+  Belo Horizonte USA-England upset, etc.). Don't add more 1950 rows.
+- Morocco-2022: CLOSED at 5 rows (15 semifinal, 53 lost to Portugal in QF,
+  265 beat Spain on penalties, 266 Regragui coach, 271 Hakimi's mother
+  moment). Don't add a 6th Morocco-2022 row of any kind.
+- WWII-driven World Cup facts (e.g. the 1938-1950 12-year gap): in scope for
+  this section (it's about the tournament's own history, not WWII itself),
+  but the specific "how many years was the gap" framing is UNFIXABLE as a
+  question — it hands over both endpoint years, so the answer is just
+  subtraction, and the only alternative (asking which editions were
+  cancelled) produces a two-part answer (1942 and 1946, rule 2 violation).
+  Don't redraft this fact in any form.
+- STOP DRAFTING "RESULT OF MATCH X" 100s: two in a row (Khazri, then Germany-
+  eliminated-Algeria-2014) leaked an existing team-identity row because one
+  side of the match WAS that row's answer. Germany-Algeria also would have
+  been Germany's 6th answer row (capped at 5 like Spain/USA). The 100s that
+  have reliably held this whole session are NOT "which team won/lost match
+  X" — they're a superstar's name (Yamal, Messi's penalty, Al-Qahtani) or a
+  Saudi/Arab NATIONAL moment that isn't phrased as a match result (the
+  holiday, the bisht, Al-Owais's POTM award). Before drafting another
+  "team eliminated/beat team in match X" 100, check (a) is either team the
+  answer to an existing row for THIS tournament's bracket, and (b) is one of
+  the teams already at its 5-row cap — if either is true, don't draft it as
+  a 100; it'll either leak or get capped. Pivot to the superstar/national-
+  moment shape instead.
+- The Owen/Beckham "same match, different answer" precedent does NOT apply
+  when the player's own country IS the other row's answer — dropped Khazri
+  ("Tunisian player who scored the winner over France 2022") because naming
+  "اللاعب التونسي" directly states approved line 189's answer (which Arab
+  team beat France 1-0 in 2022 → Tunisia), and 189 is itself 300-level, so
+  it's real information transfer, not the harmless kind. The Owen/Beckham
+  pattern only works when the two rows' answers are different PEOPLE on
+  (often) the same or opposing sides, not when one row's answer is the
+  nationality/team a new player-row is forced to name. Check this before
+  reusing the "same match different answer" shortcut again.
+- Naming the OPPONENT of a Saudi match whose identity is itself another
+  approved row's answer is a cross-row leak: tried "أمام الأوروغواي في
+  افتتاح كأس العالم 2026م" in a new Al-Owais row, which handed over the
+  approved "which team did Saudi draw 1-1 with in the 2026 opener" row's
+  answer (الأوروغواي). Fixed by dropping the opponent name entirely and
+  reframing around Player-of-the-Match instead. General rule: when writing a
+  Saudi-PLAYER-moment row, don't name the opponent if that opponent-identity
+  is itself the answer to an existing Saudi-RESULT row for the same match —
+  describe the moment/achievement instead (award won, stat achieved) rather
+  than the match context.
+- CORRECTION (this entry originally read backward — fixed 2026-10-07):
+  "retired after 2026" is a CLOSED template, not one to keep mining. Messi
+  (228), Ronaldo, and Mahrez are the THREE rows in this exact shape — that's
+  the cap. A 4th (Modrić) was dropped specifically because the template was
+  already full at two when he was drafted, AND he failed the tier test
+  (fan-famous, not Messi/Ronaldo/Mahrez-level recognition for a non-fan
+  Saudi audience — Mahrez cleared 100 only because he's an Al-Ahli Jeddah
+  star, a genuine household name in Saudi specifically). Son Heung-min's
+  rumoured retirement stays OUT even if later confirmed — the slot is full.
+  The actual broad template that DOES keep working is narrower than "any
+  emotional superstar moment": it's SUPERSTAR NAME or SAUDI NATIONAL MOMENT
+  as the answer — retirement-after-2026 was just one instance of it, now
+  spent. Other instances already used: Yamal (scored vs Saudi), Al-Owais
+  (POTM award), Neymar (emotional return from injury, cried, one-off not a
+  retirement). Look for NEW instances of the broad template (a superstar's
+  name tied to a one-off famous moment/award/record) rather than reusing
+  the retirement angle again.
+- A new angle on a DROPPED match doesn't un-drop it: tried Enner Valencia's
+  "first goal of the 2022 tournament" (Ecuador-Qatar opener) after confirming
+  the old Ecuador-beat-Qatar row had been removed — but the match itself had
+  been cut specifically for 2022-overload reasons, and at 300 (where this
+  landed; non-fans don't know Valencia's name) it doesn't even help the 100
+  gap. Lesson: before reusing a match whose OLD row was dropped, check WHY it
+  was dropped — if it was overload/clustering (not a leak/accuracy issue),
+  a different answer from the same match is still the same subject-density
+  problem, not a fix.
+- Logged pair: Morocco "last Arab team at 2026, QF exit" and Mbappé "penalty
+  saved by Bounou in that same QF" — same match, different answers, kept
+  both since the overlap is mild (knowing Mbappé's row doesn't hand over
+  "Morocco" as the answer to the other, just confirms Morocco reached a QF
+  against France, which a player would need to already piece together).
+  Mbappé's 3rd and final answer row (12, 235, this one) — don't add a 4th.
+  Germany capped at 4 (not 5) — the attempted 5th (2002 runner-up) was
+  dropped on the blurt test, not the cap, so there's still theoretically
+  room for one more IF a genuinely famous-enough Germany fact turns up, but
+  don't go looking for one on team-result shape alone.
+- Spain as answer: FULL at 5 rows (20/2010 champion, 105/2026 champion,
+  167/2014 group-stage elimination, 241/beat Saudi 4-0 2026, 265/lost to
+  Morocco on penalties 2022). All distinct facts, but don't add a 6th.
+- CROSS-SECTION duplicate check needed too, not just within كاس العالم: dropped
+  a نيوم (NEOM, 2034 WC stadium) row because السعودية line 9 (approved, 100)
+  already has نيوم as its answer via The Line. Before drafting any Saudi-
+  megaproject/landmark row here, grep staging\السعودية.csv too, not just this
+  file — rule 5 duplicates count across sections, not just within one.
+- Future-tournament FORMAT claims are rule-4 risk, not just a tier call:
+  dropped "2034 will be the first 48-team single-country WC" — FIFA has
+  floated a 64-team format change for 2030/2034, so the team COUNT for a
+  future tournament isn't settled fact yet, unlike the HOST (which FIFA has
+  formally confirmed). Only draft future-WC facts that are FIFA-confirmed
+  decisions (host country, host city/stadium), never a still-floating format
+  or team-count plan, no matter how solid-sounding the source is.
+
+Logged pairs (not duplicates, just will sort near each other):
+- 104 (which Arab country hosts 2034 → Saudi) / 264 (which Saudi city hosts
+  the 2034 opener+final → Riyadh) — 264 names Saudi Arabia in its own
+  question, which is line 104's answer, but since that's itself a 100-level
+  fact it transfers nothing new. Fine to keep both, just log as a pair.
+
+SAUDI-OPPONENT 100-TIER LANE (confirmed by reviewer 2026-10-07 as the most
+reliable shape): "which team did Saudi beat/lose to/draw with in year X" at
+team-result level (answer = a country, not a player) consistently holds at
+100 — the ONE lane that has. Rules:
+(a) Only matches Saudi audiences actually remember: openers, big wins, big
+    losses. An obscure/low-stakes group game lands at 300 purely because the
+    opponent's name itself isn't a 7-in-10 recall (this is what happened to
+    Cape Verde 2026 — the elimination story was strong but "الرأس الأخضر" as
+    a country name was the bottleneck, not the fact).
+(b) ALWAYS grep the full approved set for the opponent's name before
+    drafting — both as an answer AND inside another question's text — since
+    Saudi-vs-X facts cluster and leak easily (Belgium is already inside
+    line 8's own question text, so Belgium can never be a NEW row's answer
+    for any 1994 Saudi content).
+(c) Cap at ~12 total Saudi-opponent rows. Used so far (2026-10-07): Russia
+    (2018 opener, 100), Sweden (1994 R16 exit, 300), Germany (2002, 8-0,
+    100), Belgium (1994, via line 8's own question text, not a separate
+    row), Argentina (2022, via line 22), Egypt (2018, two angles — Salah's
+    goal at player-level AND Saudi's 2-1 win at team-level, both approved
+    and logged as a pair, kept apart in ordering), Spain (2026, 4-0, 100),
+    Cape Verde (2026, elimination, 300). That's 8 opponents / 9 rows — room
+    for roughly 4-5 more before the cap.
+(d) VERIFY EACH SCORE before drafting (goalscorer/result note errors already
+    happened twice: a wrongly-claimed Yamal hat-trick in the Spain 4-0 row,
+    unsourced "smallest nation"/"last place" claims in the Cape Verde row —
+    both had to be fixed in note before approval). Candidates flagged by
+    reviewer, still need verification: Uruguay 2026 (draw?), France 1998
+    (lost 4-0?), South Africa 1998 (drew 2-2?), Tunisia 2006 (drew 2-2?),
+    Ukraine 2006 (lost 4-0?), Cameroon or Ireland 2002, Poland 2022,
+    Mexico 2022 (NB: Mexico is on the general-overuse-caution list from
+    earlier batches — use sparingly even within this lane).
+
+English-player rows capped: Beckham (1998 red card), Owen (1998 solo goal),
+Gazza (1990 tears), Kane (2018 Golden Boot), Hurst (1966 final hat-trick) —
+five is enough for one nationality. Don't add a sixth English player row
+without dropping one of these first.
+
+"Famous player + specific moment abroad" shape consistently tests at 300,
+not 100, even for genuinely iconic moments (Ronaldinho's 2002 free kick,
+Owen's 1998 goal both bounced from 100→300) — per the four-question 100-test
+above, a non-footballer wouldn't know these from general news exposure.
+Stop drafting this shape for the 100 tier. The shapes that HAVE held at 100
+this session: Saudi-specific matches/results (not player-level detail),
+mega pop-culture crossovers (Waka Waka), universally-covered scandals
+(Maradona's doping expulsion), and fresh/current headlines (Messi's 2026
+retirement). Aim new 100 drafts at those four lanes specifically.
+
+Dropped/moved, do not re-add to كاس العالم:
+- Generic ركلات الترجيح definition (no WC anchor) — dropped entirely; the
+  WC-specific "first shootout was 1982" row already covers this ground.
+- روبير غيران, جياني إنفانتينو, مقر الفيفا, تأسيس الفيفا, تيكي
+  تاكا, لون قميص المغرب — all moved to معلومات عامة (see Scope rulings above).
+  Do not write new كاس العالم rows about FIFA-the-organization; route them to
+  معلومات عامة instead if they're otherwise sound.
+- جواو هافيلانج (FIFA president, 24 years) — moved to معلومات عامة then DROPPED
+  there entirely (2026-10-07): with غيران added, the section had 3 FIFA-president
+  rows (إنفانتينو 300, هافيلانج 500, غيران 500) — rule 6 clustering, and
+  إنفانتينو/هافيلانج were already a mirrored pair (both phrased around بلاتر).
+  Kept إنفانتينو (300) and غيران (500) since they cover different tiers/eras.
+  Do not re-add Havelange to either section without dropping one of the other two.
+
+CLOSED LANE (2026-10-08): Saudi-Argentina 2022 match (the famous 2-1 win) is
+closed at its current 5 rows (lines 22 Al-Dawsari winner, 246 Messi penalty
+goal, 247 the public holiday announced after, 273 Al-Shehri equalizer, 274
+Al-Shahrani injury) — same treatment as the Morocco-2022 cap. Dropped idea:
+Al-Bulayhi's viral confrontation with Messi after the second goal (confirmed
+true and sourceable, but this match lane is full; do not revisit unless a row
+above gets reopened/dropped).
+Also rejected: Al-Khilaiwi's 1998 red card vs France (Saudi's only WC red
+card ever) — too obscure for 100 even under the loosened bar, feels 500-tier,
+and 500 is already closed. "Zidane sent off vs Saudi 1998" also rejected by
+reviewer — any wording pairing Zidane/France-1998 with Saudi leaks the
+approved "who beat Saudi 4-0 in 1998" row (line 253, answer فرنسا).
+
+FRANCE-AS-ANSWER CAP: reviewer flagged the France-2018-vs-Argentina R16 row
+(4-3, Mbappé brace) as "the last France answer" — France already answers
+lines 10 (2018 champion), 190 (1998 champion), 253 (beat Saudi 4-0 1998).
+Do not add a 4th France-answer row without reviewer sign-off.
+
+LEAK PATTERN (2026-10-08): "lost final" team-answer rows must grep for any
+existing row that already states which two teams played that final — not
+just check the team's own answer-count cap. Dropped: "إيطاليا, lost 1994
+final" — killed by line 67 (300, Baggio's missed penalty), whose own
+question already says "نهائي كأس العالم 1994م" + إيطاليا's player, handing
+the team identity away. Team caps and this leak check are separate; both
+must pass. Replacement used instead: Brazil lost the 1998 final to France
+(no existing row names Brazil as France's 1998 final opponent).

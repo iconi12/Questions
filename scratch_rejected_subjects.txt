@@ -33,6 +33,10 @@ Format: subject — reason rejected — (batch/row context if known)
 - مجلة المنهل as "first Saudi magazine" — dropped; source only supported a weaker claim
   (first to reach a silver jubilee), not "first" outright. Could retry if a real source
   for "first" surfaces.
+- الحجر المنقبي (traditional Mecca/Jeddah building stone) — was briefly in معلومات عامة
+  (wrong section: the question names مكة and جدة explicitly, so it's Saudi-scoped, not
+  general). Moved to السعودية and approved there (row 316, 500, 2026-10-07). Do NOT
+  re-add to معلومات عامة.
 
 Capped clusters (do not add more rows to these categories):
 - UNESCO World Heritage Sites: 8 (مدائن صالح/الحِجر, الدرعية, جدة البلد, جبة, حمى,
