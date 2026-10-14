@@ -30,32 +30,74 @@ Imagine 10 random Saudi adults hearing the question:
 - **500** — 2 or fewer would answer correctly; needs specialist knowledge or serious fandom.
 - When unsure between two levels, choose the harder question, not the easier one.
 - A 500 question must be hard because of the knowledge it needs, not because of confusing wording.
+- **Difficulty = how few people can RECALL the answer — not how old the fact is.** A recent event can be 500 if few people remember the exact detail; an old event can be 100 if everyone learned it.
+  Human's reference 500: "من سجّل ركلة الجزاء في مباراة سويسرا والبوسنة والهرسك في كأس العالم 2026؟" — the match is recent and many watched it, but few remember who took the penalty. That is the model for a 500.
+
+## Core quality rules (human, 2026-10-14) — HIGHEST PRIORITY, ALL SECTIONS
+These came from the human reviewing finished output. They apply to every section, and override any older rule or heuristic in this file that conflicts with them.
+
+### A. Short questions with no hints
+A question contains ONLY what is needed for it to have exactly one correct answer. Every extra word is a hint.
+- **Clause test** — for each descriptor, date, place or name in the question, ask: "If I delete this, does the question get a second valid answer?"
+  - No → it is a hint. Delete it.
+  - Yes → it is needed. Keep it.
+- **Cover test** — cover the answer and read the question as a player: does anything in it point toward the answer (a nickname, a famous trait, a well-known club, a nationality, the answer's first word, a related famous fact)? If yes, cut it.
+- Do NOT add "famous" descriptions to help the player (الشهير، الملقب بـ، أبرز، المعروف بـ...) unless that description IS the question.
+- Examples:
+  - ❌ ما اسم المدينة الساحلية المطلة على البحر الأحمر التي تُعرف بعروس البحر الأحمر وتُعد بوابة الحرمين؟
+    ✅ ما المدينة السعودية الملقّبة بعروس البحر الأحمر؟ → جدة
+  - ❌ ما اسم المشروع العملاق الذي تبنيه السعودية في أقصى الشمال الغربي ضمن رؤية 2030 ويضم مدينة (ذا لاين)؟
+    ✅ ما المشروع الذي تتبع له مدينة ذا لاين؟ → نيوم
+  - ❌ ما اسم المعاهدة التي وقّعها الملك عبدالعزيز مع بريطانيا عام 1915م، واعترفت فيها بريطانيا بحكمه على نجد والأحساء والقطيف؟
+    ✅ ما المعاهدة التي وقّعها الملك عبدالعزيز مع بريطانيا عام 1915؟ → معاهدة دارين
+
+### B. Short does NOT mean vague
+Cutting hints must never leave the question open to more than one answer.
+- ❌ من هداف كأس العالم؟ (which edition? all-time?) → ✅ من هداف كأس العالم 2022؟
+- ❌ ما أول خط سكة حديد في السعودية؟ (the Ottoman Hejaz Railway is a rival answer) → ✅ ما أول خط سكة حديد أنشأته الدولة السعودية؟
+- These qualifiers pass the clause test (deleting them creates a second answer), so they stay. That is the difference between a needed detail and a hint.
+
+### C. Strict section relevance
+- The question must be ABOUT the section's subject — not merely mention it, take place in it, or involve someone from it.
+- Test: a player who chose this category — would they expect this question? If the link to the section is incidental, the row is rejected.
+  - Examples of incidental (reject): in الكويت, a science fact whose only link is that the scientist was Kuwaiti-born; in كاس العالم, a country's public holiday after a win; in عالم الحيوان, a sports team named after an animal.
+- Out-of-scope rows are DELETED, not reworded into scope. When unsure, reject — there is no shortage of in-scope questions.
+
+### D. 500 questions must not be mostly old history
+- Difficulty must come from recall (see the definition above), not from age.
+- In sections that are NOT historical by nature (everything except الحرب العالمية الاولى، الحرب العالمية الثانية، تاريخ، السيرة النبوية، قصص الانبياء):
+  - At most 3 in every 10 of a batch's 500 questions may be about events before the year 2000.
+  - At least 3 in every 10 must be about the last ~15 years — exact details of recent events (who scored/missed/assisted, the second or third place, the runner-up, the exact count, the person behind a recent decision).
+  - "In which year...?" must not be the default 500 form. At most 2 in every 10 500s may have a year as the answer.
+- In historical sections, a 500 should be a precise detail of a known event (who commanded, where exactly, how many) rather than an obscure event almost nobody has heard of.
+- Reminder: "small set of people" answers (e.g. the 2 players who missed in a shootout) are allowed — see the كاس العالم notes on rule 2.
 
 ## Calibration (first section only)
 Before mass writing, writer produces 5 questions per level for the first section and stops.
 The human approves or adjusts them; the approved ones are pasted below as the reference for all sections.
 
 ### Reference examples
-Approved from the السعودية calibration batch (2026-10-01):
+Approved from the السعودية calibration batch (2026-10-01). Wording tightened on 2026-10-14 to the concise, no-hint style of Core rule A — answers and tiers are unchanged. Copy this STYLE, not the old long style.
 
 - 100:
-  - ما هي عاصمة المملكة العربية السعودية؟ → الرياض
-  - ما هي العملة الرسمية المستخدمة في المملكة العربية السعودية؟ → الريال السعودي
-  - من هو الملك المؤسس للمملكة العربية السعودية الحديثة؟ → الملك عبدالعزيز
-  - ما اسم أكبر صحراء رملية متصلة في العالم، وتقع جنوب شرق المملكة العربية السعودية؟ → الربع الخالي
-  - ما اسم الجبل الشهير الواقع في المدينة المنورة ويُعد من أبرز معالمها الطبيعية؟ → جبل أحد
-  - ما اسم المشروع العملاق الذي تبنيه السعودية في أقصى الشمال الغربي ضمن رؤية 2030 ويضم مدينة (ذا لاين)؟ → نيوم (moved down from 300 — the single most marketed Saudi project name, encountered passively regardless of interest)
-  - ما اسم الخطة الاستراتيجية السعودية التي أُطلقت عام 2016م لتنويع مصادر الاقتصاد بعيداً عن النفط؟ → رؤية 2030 (moved down from 300 — the umbrella term for the whole Vision 2030 program, used in government/media messaging more than any single project name)
+  - ما عاصمة السعودية؟ → الرياض
+  - ما عملة السعودية؟ → الريال السعودي
+  - من مؤسس المملكة العربية السعودية؟ → الملك عبدالعزيز
+  - ما أكبر صحراء رملية متصلة في العالم؟ → الربع الخالي
+  - ما أشهر جبل في المدينة المنورة؟ → جبل أحد
+  - ما المشروع الذي تتبع له مدينة ذا لاين؟ → نيوم (moved down from 300 — the single most marketed Saudi project name, encountered passively regardless of interest)
+  - ما اسم الخطة السعودية التي أُطلقت عام 2016 لتنويع الاقتصاد؟ → رؤية 2030 (moved down from 300 — the umbrella term used in government/media messaging more than any single project name)
 - 300:
-  - ما اسم الموقع الأثري السعودي الذي كان أول موقع في المملكة يُدرج على قائمة التراث العالمي لليونسكو، وذلك عام 2008م؟ → مدائن صالح (الحِجر)
-  - في أي عام أُعلن توحيد أجزاء المملكة وتسميتها بـ(المملكة العربية السعودية)؟ → 1932
-  - ما اسم أول خط سكة حديد شيدته الحكومة السعودية، ويربط الرياض بالدمام، وافتُتح رسمياً عام 1951م؟ → خط سكة حديد الرياض-الدمام
-  - ما اسم أكبر جزيرة سعودية من حيث المساحة، وتقع في البحر الأحمر قبالة سواحل جازان؟ → جزيرة فرسان الكبرى (moved down from 500 — too well known)
+  - ما أول موقع سعودي أُدرج في قائمة التراث العالمي لليونسكو؟ → الحِجر (مدائن صالح)
+  - في أي عام أُعلن توحيد المملكة العربية السعودية؟ → 1932
+  - ما أول خط سكة حديد أنشأته الدولة السعودية؟ → الرياض–الدمام ("أنشأته الدولة السعودية" is needed — without it the Ottoman Hejaz Railway is a second answer. The old wording put the answer inside the question.)
+  - ما أكبر جزيرة سعودية؟ → جزيرة فرسان الكبرى (moved down from 500 — too well known)
 - 500:
-  - ما اسم المعاهدة التي وقّعها الملك عبدالعزيز مع بريطانيا عام 1915م، واعترفت فيها بريطانيا بحكمه على نجد والأحساء والقطيف؟ → معاهدة دارين
-  - ما اسم أطول وادٍ في المملكة العربية السعودية؟ → وادي الرمة
-  - ما اسم أول بئر نفط أنتج بكميات تجارية في المملكة العربية السعودية عام 1938م؟ → بئر الدمام رقم 7
-  - ما اسم أعلى جبل في المملكة العربية السعودية؟ → جبل السودة (reworded from "أعلى قمة جبلية" — question must name what the answer actually is, e.g. a mountain, not a "peak")
+  - ما المعاهدة التي وقّعها الملك عبدالعزيز مع بريطانيا عام 1915؟ → معاهدة دارين
+  - ما أطول وادٍ في السعودية؟ → وادي الرمة
+  - ما اسم أول بئر نفط تجاري في السعودية؟ → بئر الدمام رقم 7
+  - ما أعلى جبل في السعودية؟ → جبل السودة (the question names what the answer is — a mountain, not a "peak")
+  - Note: all four of these are about geography or the early 1900s. That is NOT the target mix for 500 — see Core rule D, and the human's recent-event reference under Difficulty definitions.
 
 Lessons from calibration, applicable to all sections:
 - A question must ask for exactly the kind of thing the answer is (don't ask for a "قمة" when the answer is a جبل's name, etc.) — check this noun-match explicitly in Pass 3.
@@ -67,7 +109,7 @@ Lessons from calibration, applicable to all sections:
 Converged on by writer and reviewer through 158 approved rows (2026-10-01). These are working rules, not just lessons from one incident — apply them going forward on every section. Grouped by the pass each belongs to.
 
 **Difficulty (Pass 2):**
-- 500 holds reliably for pre-1970 named things: a specific instrument, unit, battle, body, statute, artifact or office-holder. Modern institutional subjects almost always fail at 500 because anything the state built recently it also publicized.
+- ~~500 holds reliably for pre-1970 named things~~ — REPLACED 2026-10-14 by Core rule D. Age is no longer a route to 500 by itself; it caused 500s to cluster on early-1900s facts. What still holds: modern things the state actively PUBLICIZED (projects, campaigns, institutions) are rarely 500, because publicity spreads the name. A recent event's small detail that nobody publicized (who took the penalty, who came second) is a strong 500.
 - Within heritage and traditional topics the discriminator is promotion, not age — specifically MANUFACTURED AWARENESS (a campaign actively pushing the name into public view), not fame in general. If an item has a UNESCO listing it was built around, is the subject of a national festival, has its own museum, or supplied a logo, it is 300 however ancient its roots. A craft that merely gets demonstrated as one of many at a heritage festival (incidental display) is not thereby promoted — it stays 500 if nothing else marks it as a campaign's subject. A nickname or fact that spread culturally without anyone pushing it (e.g. a city's traditional epithet) is also not manufactured awareness — a player either happens to know it or doesn't, which is the 300 "needs interest" case, not the 100 case. Applying "well-known" as a bare fame test instead of this narrower test collapses the 300 band.
 - If an ordinary person encounters the fact in daily life, it is 100 no matter how institutional the subject sounds. For regulators specifically, the split is consumer-facing vs. industry-facing, not promoted vs. unpromoted: a food/drug authority is 100 because its approvals are on every package and its recalls are public news, while a securities regulator or a development fund is 300 because an ordinary person never transacts with it, however important it is.
 - A year-recall question sits one band above recognition of the same event: everyone knows the weekend changed, far fewer can date it.
@@ -127,13 +169,15 @@ Converged on by writer and reviewer through 158 approved rows (2026-10-01). Thes
 ## Question rules
 1. Arabic (فصحى بسيطة), clear wording, only one possible interpretation.
 2. One correct answer, short (1–4 words). No "X or Y" answers.
-3. The answer must not appear in, or be obvious from, the question.
+3. The answer must not appear in, or be obvious from, the question — no hints of any kind (Core rule A).
 4. Verifiable facts only. No opinions, no disputed matters, nothing likely to change (current office holders, records) unless the question includes a date.
 5. No duplicates — within the section or across sections (rephrased versions count as duplicates).
    Before writing each batch, read all existing `staging/*.csv` files.
 6. Spread questions across the whole topic of the section; don't cluster on one sub-topic.
 7. Follow the section's notes in `sections.md`.
-8. Keep questions concise: include only the clues needed to identify the answer. Drop official-name expansions, dates, and descriptors that don't narrow the answer.
+8. Keep questions concise: include only the clues needed to identify the answer. Drop official-name expansions, dates, and descriptors that don't narrow the answer. Apply the clause test (Core rule A) — but never cut a detail that keeps the answer unique (Core rule B).
+9. The question must be centrally about its section (Core rule C).
+10. 500 questions follow the mix in Core rule D.
 
 ## Image rules (optional)
 Images are optional — add one only when it genuinely helps the question or the answer.
@@ -146,6 +190,7 @@ Images are optional — add one only when it genuinely helps the question or the
 ## Workflow
 1. Work one section at a time, in the order of `sections.md`.
 2. writer adds questions in batches of 50 rows with `status=pending`, then messages reviewer.
+   Before sending, writer self-checks every row: scope (Core rule C), clause test and cover test (Core rule A), one answer only (Core rule B), and counts the batch's 500 mix (Core rule D). Fix before sending — don't leave it to the reviewer.
 3. Each batch goes through 3 review passes, in order. Each pass checks ONLY its own focus (see below).
    A row moves forward only when it passes: `pending` → `pass1_ok` → `pass2_ok` → `approved`.
 4. In every pass, reviewer replies in this format:
@@ -160,7 +205,8 @@ Images are optional — add one only when it genuinely helps the question or the
 ## Review passes
 Treat each pass as a fresh check — do not assume a row is correct because it passed an earlier pass.
 
-### Pass 1 — Factual accuracy
+### Pass 1 — Scope gate, then factual accuracy
+- FIRST, before any search: is the row centrally about the section (Core rule C)? If not → `row N: out of scope — delete`. Do not verify facts for it and do not suggest a rewording. When unsure, reject.
 - Verify the answer is correct and is the only correct answer.
 - Use web search for every 300 and 500 question, and for any 100 question with the slightest doubt. Never approve a doubtful fact from memory alone.
 - Reject facts that are disputed or likely to change (rule 4).
@@ -169,12 +215,17 @@ Treat each pass as a fresh check — do not assume a row is correct because it p
 - Check the points match the difficulty definitions and reference examples.
 - Check the 100 / 300 / 500 levels in the batch are clearly different from each other.
 - Check a 500 question is hard because of knowledge, not confusing wording.
+- Check a 500 question is hard because few people RECALL the answer — not because the event is old. A 500 that is hard only because it is from the early 1900s (and nobody would know it however interested they are) is rejected or replaced.
+- Count the batch's 500 mix against Core rule D (pre-2000 share, recent share, year-as-answer share). If the batch breaks it, say which rows to replace: `batch: 500 mix fails — 6/10 pre-2000; replace rows X, Y, Z with recent-detail questions`.
+- If a hint was removed in Pass 3 of an earlier round, re-check the tier: a row that was leaning on a hint was easier than it looked.
 
 ### Pass 3 — Wording and duplicates
-- One possible interpretation only; clear Arabic.
+- One possible interpretation only; clear Arabic. Not vague — if the question allows a second valid answer, it fails (Core rule B).
 - The answer is not in, or obvious from, the question.
+- Run the clause test and the cover test on EVERY row (Core rule A). For each hint, name it: `row 12: hint — "الملقب بالدون" points to the answer; cut it`. A row passes only with zero hints.
+- Length check: if a question is longer than ~15 words, justify each clause with the clause test or cut it.
 - Answer is short (1–4 words), no "X or Y".
 - No duplicates or rephrased duplicates against all `staging/*.csv` files.
 - Questions are spread across the section's topic, not clustered.
 - Images (if any): link loads, shows the right thing, follows the image rules, and the question image doesn't reveal the answer.
-- Scope: the row is a Saudi landmark, object, practice or person per sections.md, not a general fact that happens to be located in Saudi territory.
+- Scope (second check, after rewording): the row is still centrally about its section per Core rule C and sections.md — not a general fact that merely happens to be located in, or involve someone from, the section's subject. (For السعودية: a Saudi landmark, object, practice or person, not a general fact that happens to be on Saudi territory.)

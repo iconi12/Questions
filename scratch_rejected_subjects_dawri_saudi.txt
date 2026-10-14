@@ -1,0 +1,135 @@
+DISPUTED SOURCE (2026-10-08): title counts and "first ever league" claims tied
+to the Saudi Arabian Football Federation's historical documentation project
+(announced 2025) are disputed — reported inconsistently across sources (some
+call it still in-progress, "~96% complete" as of Jan 2025), and exact title
+counts per club vary by source/year. Dropped two rows resting on it:
+- "الوحدة, champion of the first Saudi league ever (1957)" — the 1957 start
+  date itself is something the project "proposes", not settled fact.
+- "الهلال, 21 league titles per the 2025 documentation project" — title
+  counts also drift every season regardless, so a specific number needs an
+  "up to season X" anchor AND a non-disputed source; this project is neither.
+Avoid drafting rows whose sole factual basis is this documentation project
+until/unless a stable, consistently-reported figure emerges.
+
+CLUB BALANCE: soft cap agreed with reviewer — no single club as the
+answer/subject of more than ~20% of this section's approved rows (~60 of
+300). Mix in Al-Shabab, Al-Ettifaq, Al-Taawoun, Al-Fateh (2012-13 title),
+Al-Raed, Al-Qadsiah, Damac, etc., not just the big four (Hilal/Nassr/
+Ittihad/Ahli).
+
+RECORD STALENESS: run a "<record> 2025-26" check on every record claim
+before drafting (same discipline as كاس العالم's "<record> 2026" rule) —
+caught that Al-Hilal's 96-point 2023-24 record still stands after 2025-26
+(Al-Nassr's title that season was with fewer points), but also that Al-Hilal
+went unbeaten again in 2025-26 while finishing 2nd — so don't describe
+2023-24 as uniquely/specially unbeaten, only as the points-record season.
+
+TIER NOTE: "which club did [superstar] join" beats "what year did [superstar]
+join" at the same signing — fans know the club far more reliably than the
+exact year/month, especially when a transfer announced in one year (Dec
+2022) debuted in the next (Jan 2023). Prefer club-identity questions for
+these star-transfer rows; save exact year/date for a higher tier if asked at
+all.
+
+LEAK PATTERN (2026-10-08): a coach-identity question that names the club it
+won a title with cannot coexist with a separate club-identity question about
+that same title (e.g. "which Tunisian coach led [club] to the 2012-13
+title?" hands away "which club broke the big-four's hold on the 2012-13
+title?"). When both are good candidates, keep the more famous/headline fact
+(usually the club-identity one) and drop the coach row, or reword the coach
+row to not name the club.
+
+AVOID: the 1957 "first Saudi league" origin story entirely, even reframed as
+the King's Cup/كأس خادم الحرمين الشريفين. Two different search results
+described what may be the same or different 1957 competitions (a
+points-based "دوري كأس جلالة الملك سعود" won by الوحدة, vs a knockout
+"كأس جلالة الملك" / later كأس خادم الحرمين الشريفين) inconsistently. Given
+the reviewer's documented concern about the SAFF documentation project's
+reliability for this era, treat the whole 1957-origin topic as unsettled
+and skip it rather than trying to reframe around it.
+
+WC-overlap check: Majed Abdullah and Sami Al-Jaber already answer كاس العالم
+rows (1994 captain; scorer in 3 WC editions respectively). League-specific
+facts about them (e.g. Majed Abdullah's 189-goal all-time Saudi-league
+scoring record) are fine, but grep كاس العالم's file before drafting to
+confirm the specific fact isn't already used there.
+
+CSV HYGIENE: a thousands-separator comma in a note field (e.g. "62,400 مقعد")
+breaks the row into 9 fields. Same failure mode as كاس العالم's URL-comma
+incident. Write large numbers without thousands separators in notes/answers
+(e.g. "62400"), and always run the len(row)!=8 integrity check after any
+append — caught this one immediately before sending to the reviewer.
+
+AVOID: the Crown Prince Cup (كأس ولي العهد) "first edition 1957, won by
+الوحدة" claim — same الوحدة+1957 pairing as the already-dropped league and
+King's Cup claims. Strong signal these are the same conflated/unreliable
+historical narrative repeating across differently-named competitions. Treat
+the entire cluster of "1957 + الوحدة first title" claims as off-limits,
+regardless of which competition name is attached.
+
+AVOID: Al-Wehda's founding year is itself explicitly disputed in sources —
+claims range from 1916 (pushed by the club's own president) to its 1945
+federal registration date. Do not draft an Al-Wehda founding-year row at
+all, regardless of which year, until/unless a single institutional source
+settles it.
+
+FLAGGED (2026-10-08, awaiting reviewer call): Majed Abdullah's all-time
+Saudi-league scoring record is approved at 189 goals (sourced to
+saudipedia.com/قائمة-هدافي-الدوري-السعودي), but a later Saudipedia search
+turned up a ranked table (same domain, different URL:
+"قائمة الهدافين التاريخيين في الدوري السعودي") showing him at 178, while a
+separate blurb on the same page claims 189. Two numbers from ostensibly the
+same institutional source. Also found goal.com wrongly calling Omar Al-Somah
+(144, per Saudipedia's own table, rank #3) "الهداف التاريخي للدوري السعودي"
+in an unrelated piece — shows this specific topic (exact historic goal
+tallies) is sourced inconsistently even by outlets that are usually
+reliable. Treat any further "exact all-time goal count" row as high-risk
+until this is resolved; identity-only claims (e.g. "who holds the record",
+no number) are safer.
+
+RESOLVED (2026-10-08): Majed Abdullah row reopened and fixed — now asks
+identity only ("من هو الهداف التاريخي للدوري السعودي حتى موسم 2025-2026م؟"
+→ ماجد عبدالله), no number in the question, with both disputed figures
+(178/189) and the "لا يُقبل" rejection of Al-Somah folded into the note.
+General rule going forward: for any all-time/historic statistical record
+(goal tallies especially, pre-Pro-League-era players most at risk), question
+the IDENTITY of the record holder, never the exact number, unless a single
+figure is consistently repeated across multiple independent institutional
+sources. This mirrors the تروجينا reopening precedent from السعودية.
+
+VERIFICATION DISCIPLINE (2026-10-08, after 3 wrong-fact catches in one day:
+Hamdallah's stale record, the Mrsool Park mid-season rename, and a wrong
+Crown Prince Cup 2016 winner/opponent): WebSearch's AI-generated summary of
+a page can simply be WRONG even when it cites the right URL — it got the
+2016 Crown Prince Cup final backwards (said Al-Ahli beat Al-Nassr; the
+actual Wikipedia page says Al-Hilal beat Al-Ahli). From now on, for any
+specific score/date/winner claim that will anchor a row, actually fetch the
+cited page with WebFetch and read its stated content directly — do not
+draft a row from a WebSearch summary alone for anything more specific than
+a well-known headline fact. This cost real review cycles today.
+
+CLOSED SHAPE: continental-title rows (Al-Qadsiah ACWC 1993-94, Al-Ahli ACL
+2024-25, Al-Hilal's 4 ACL titles, Al-Ittihad's back-to-back ACL 2004/2005,
+Al-Hilal's IFFHS Asian Club of the Century) are now 5 rows — CLOSED. Dropped
+Al-Nassr's 1997-98 Asian Cup Winners' Cup for this reason (accuracy was
+fine, purely a cap issue). Any further Al-Nassr history at 500 needs a
+DOMESTIC angle, not continental.
+
+CUP-SPECIFIC rows (King's/Crown Prince Cup identity questions, not league)
+are now 2 (96-points row doesn't count, that's league; the actual cup rows
+are Al-Hilal's 2023-24 King's Cup and Al-Taawoun's 2019 King's Cup) — within
+the ~10% cap, room for a couple more.
+
+CLUB COLOURS: capped at 2 (Hilal blue, Nassr yellow), but reviewer
+explicitly approved a 3rd slot for Al-Ittihad (black/yellow) as a balance
+exception — confirmed OK to use, closed after that one.
+
+CLOSED SHAPE: "champion of season X" league-identity rows are now 4 (2008-09
+first champion, 2022-23 Al-Ittihad, 2023-24 Al-Hilal unbeaten, 2024-25
+Al-Ittihad) — CLOSED. Al-Hilal is the reflex wrong answer for any of these,
+so they're all 300, never 100. Keep them apart in file ordering since
+several share الاتحاد as the answer.
+
+ORIGINAL-NAME shape closed at 3 (Al-Hilal→النادي الأولمبي, Al-Hazem→شباب
+الرس, Al-Khaleej→نادي النسر, with "النصر: لا يُقبل" disambiguation on the
+last one since النسر/النصر sound alike aloud).
