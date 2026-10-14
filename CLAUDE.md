@@ -17,6 +17,7 @@ Each question has: section, question, answer, points (100 / 300 / 500).
   - `status` is one of: `pending`, `pass1_ok`, `pass2_ok`, `approved`, `flagged`
 - `questions.xlsx` — final output, built by lead with openpyxl from `approved` rows only.
   - One sheet per section, columns: `السؤال | الجواب | النقاط | صورة السؤال | صورة الجواب | ملاحظات أو أجوبة مقبولة`, sorted by points. The 6th column carries the row's `note` for approved rows that have a host-relevant one (accepted variants, explicit wrong-but-tempting answers, disambiguation) — leave it empty when there's nothing host-critical.
+  - Human ruling (2026-10-14): most approved rows had a note, and most of those included a source citation/link (e.g. "المصدر: https://..."). A citation is never host-relevant — don't write one into `note` at all, in the CSV or anywhere else. Before writing a note, ask: would a host reading this aloud mid-game need it? If the only content is a source, or the source is appended after real host-relevant content, leave the note empty or keep only the host-relevant part. Verification sourcing belongs in your reply to the reviewer, not in the row.
   - Plus a sheet `flagged` listing every flagged row with its note, for the human to decide.
 
 ## Quantity
