@@ -17,7 +17,6 @@ Each question has: section, question, answer, points (100 / 300 / 500).
   - `status` is one of: `pending`, `pass1_ok`, `pass2_ok`, `approved`, `flagged`
 - `questions.xlsx` — final output, built by lead with openpyxl from `approved` rows only.
   - One sheet per section, columns: `السؤال | الجواب | النقاط | صورة السؤال | صورة الجواب | ملاحظات أو أجوبة مقبولة`, sorted by points. The 6th column carries the row's `note` for approved rows that have a host-relevant one (accepted variants, explicit wrong-but-tempting answers, disambiguation) — leave it empty when there's nothing host-critical.
-  - Human ruling (2026-10-14): most approved rows had a note, and most of those included a source citation/link (e.g. "المصدر: https://..."). A citation is never host-relevant — don't write one into `note` at all, in the CSV or anywhere else. Before writing a note, ask: would a host reading this aloud mid-game need it? If the only content is a source, or the source is appended after real host-relevant content, leave the note empty or keep only the host-relevant part. Verification sourcing belongs in your reply to the reviewer, not in the row.
   - Plus a sheet `flagged` listing every flagged row with its note, for the human to decide.
 
 ## Quantity
@@ -173,7 +172,7 @@ Converged on by writer and reviewer through 158 approved rows (2026-10-01). Thes
 3. The answer must not appear in, or be obvious from, the question — no hints of any kind (Core rule A).
 4. Verifiable facts only. No opinions, no disputed matters, nothing likely to change (current office holders, records) unless the question includes a date.
 5. No duplicates — within the section or across sections (rephrased versions count as duplicates).
-   Before writing each batch, read all existing `staging/*.csv` files.
+   Check with the Grep tool, not by reading files (see Token efficiency).
 6. Spread questions across the whole topic of the section; don't cluster on one sub-topic.
 7. Follow the section's notes in `sections.md`.
 8. Keep questions concise: include only the clues needed to identify the answer. Drop official-name expansions, dates, and descriptors that don't narrow the answer. Apply the clause test (Core rule A) — but never cut a detail that keeps the answer unique (Core rule B).
@@ -188,16 +187,43 @@ Images are optional — add one only when it genuinely helps the question or the
 4. A question image must not reveal the answer.
 5. The link must be checked and confirmed to load the correct image before approval.
 
+## Token efficiency (human, 2026-10-15)
+These rules cut cost without lowering quality. Follow them on every batch.
+
+**Duplicate checks — Grep, never full reads**
+- Never read whole `staging/*.csv` files to look for duplicates. As the project grows they become hundreds of thousands of tokens.
+- For each new row, Grep across `staging/*.csv` for:
+  1. the answer (and its main variant, e.g. with/without "ال"), and
+  2. 1–2 distinctive key terms from the question (a name, place, event).
+- Read only the rows Grep returns, and judge whether they ask the same thing.
+- A rephrased duplicate shares its answer or its key subject, so these two searches catch it.
+
+**Read only what you need**
+- writer and reviewer read only the current batch's rows (filter by `status`), not the whole section file.
+- Read a file once per pass; don't re-read it after every small edit.
+
+**Short messages**
+- reviewer lists ONLY the rows with problems, then ends with one summary line: `pass 2: rows 1–50 — 44 OK, 6 issues`. Do not write `row N: OK` for each passing row.
+- writer replies only with what changed or a counter-argument — no restating of the rows.
+
+**Searching**
+- Use WebSearch first; open a page with WebFetch only when the search snippets don't settle the fact.
+- One good source is enough when it's authoritative (official site, Wikipedia with citation, the relevant wiki for TV/film). Add a second source only when the first is weak or sources conflict.
+- No searches for 100-point rows unless there's real doubt (as in Pass 1), except where `sections.md` requires every row to be searched.
+
+**Images**
+- Open each image once to check it, and again only after an edit. Don't re-open approved images.
+
 ## Workflow
 1. Work one section at a time, in the order of `sections.md`.
 2. writer adds questions in batches of 50 rows with `status=pending`, then messages reviewer.
    Before sending, writer self-checks every row: scope (Core rule C), clause test and cover test (Core rule A), one answer only (Core rule B), and counts the batch's 500 mix (Core rule D). Fix before sending — don't leave it to the reviewer.
 3. Each batch goes through 3 review passes, in order. Each pass checks ONLY its own focus (see below).
    A row moves forward only when it passes: `pending` → `pass1_ok` → `pass2_ok` → `approved`.
-4. In every pass, reviewer replies in this format:
-   - `row 4: OK`
+4. In every pass, reviewer replies with problem rows only, plus one summary line (see Token efficiency):
    - `row 7: wrong answer — correct is X — source: <link>`
    - `row 9: points mismatch — this is 100, not 500`
+   - `pass 1: rows 1–50 — 47 OK, 3 issues`
 5. writer fixes or replies with a counter-argument, then updates status.
    If a fix changes the question or answer, the row goes back to `pending` and restarts from pass 1.
 6. Disagreements: max 2 rounds per row per pass. If still unresolved, writer sets `status=flagged` and writes both views in `note`.
@@ -226,7 +252,7 @@ Treat each pass as a fresh check — do not assume a row is correct because it p
 - Run the clause test and the cover test on EVERY row (Core rule A). For each hint, name it: `row 12: hint — "الملقب بالدون" points to the answer; cut it`. A row passes only with zero hints.
 - Length check: if a question is longer than ~15 words, justify each clause with the clause test or cut it.
 - Answer is short (1–4 words), no "X or Y".
-- No duplicates or rephrased duplicates against all `staging/*.csv` files.
+- No duplicates or rephrased duplicates across `staging/*.csv` — checked with Grep (see Token efficiency), not by reading the files.
 - Questions are spread across the section's topic, not clustered.
 - Images (if any): link loads, shows the right thing, follows the image rules, and the question image doesn't reveal the answer.
 - Scope (second check, after rewording): the row is still centrally about its section per Core rule C and sections.md — not a general fact that merely happens to be located in, or involve someone from, the section's subject. (For السعودية: a Saudi landmark, object, practice or person, not a general fact that happens to be on Saudi territory.)
