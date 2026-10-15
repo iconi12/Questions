@@ -20,7 +20,7 @@ History, geography, culture, landmarks, Vision 2030, notable facts about Saudi A
 Mixed general knowledge: science, inventions, records, everyday facts.
 
 ## 3. كاس العالم
-FIFA World Cup history. Any question about records or "most ..." must state "up to [year/tournament]".
+FIFA World Cup history — men's tournament only (human ruling, 2026-10-15). The FIFA Women's World Cup is out of scope here; no other section covers it either, so exclude it entirely rather than placing it elsewhere. Any question about records or "most ..." must state "up to [year/tournament]".
 
 ## 4. الدوري السعودي
 Saudi Pro League. Time-sensitive facts must include the season (e.g. "في موسم 2023-2024").
