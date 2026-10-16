@@ -24,7 +24,12 @@ Each question has: section, question, answer, points (100 / 300 / 500).
 - Counts refer to `approved` rows. Keep writing until each level reaches 100 approved.
 
 ## Difficulty definitions
-Imagine 10 random Saudi adults hearing the question:
+**Audience (human, 2026-10-16):** the people playing this game are mostly YOUNG Saudis (roughly 18–30). Judge every question by them — not by the average Saudi adult, and not by a specialist.
+- What young Saudis follow is EASY for this audience: gaming and esports, football (Saudi league, European leagues, World Cup), social media, recent Saudi events and projects, current pop culture.
+- Older history, traditional heritage and things older generations know from experience are HARDER for this audience than they would be for the general public.
+- Human's calibration example: "من فاز ببطولة الأندية في كأس العالم للرياضات الإلكترونية 2024؟" → Team Falcons is **100**, not 500 — most young Saudi players know it.
+
+Imagine 10 typical players of this game (young Saudis) hearing the question:
 - **100** — 7 or more of them would answer correctly.
 - **300** — about 3–4 would answer correctly; needs interest in the topic.
 - **500** — 2 or fewer would answer correctly; needs specialist knowledge or serious fandom.
@@ -56,6 +61,15 @@ Cutting hints must never leave the question open to more than one answer.
 - ❌ من هداف كأس العالم؟ (which edition? all-time?) → ✅ من هداف كأس العالم 2022؟
 - ❌ ما أول خط سكة حديد في السعودية؟ (the Ottoman Hejaz Railway is a rival answer) → ✅ ما أول خط سكة حديد أنشأته الدولة السعودية؟
 - These qualifiers pass the clause test (deleting them creates a second answer), so they stay. That is the difference between a needed detail and a hint.
+- **Pin every event to ONE occurrence (human, 2026-10-16).** If the thing asked about happened more than once — two teams meet twice a season, a tournament or award recurs, a ruler visited a place twice — the question must say which one: the leg (ذهاب / إياب), round, date, edition, or final score. A season or year alone is not enough when the event happened twice inside it.
+  - ❌ من سجّل هدف النصر ضد القادسية في الدوري موسم 2025-2026؟ (they met twice that season)
+  - ✅ من سجّل هدف النصر ضد القادسية في إياب الدوري موسم 2025-2026؟
+  - A final score or "the only goal" is a valid way to pin a match: "من سجّل هدف المباراة الوحيد بين الأهلي والاتحاد في ذهاب الدوري موسم 2025-2026؟"
+
+### B2. No opinion words (human, 2026-10-16)
+- Do not use subjective words — أفضل، أعظم، أقوى، أجمل — in a question. They turn a fact into an opinion (rule 4) and can have more than one answer.
+- Allowed only when they are part of an OFFICIAL award or a measurable record, and then name it: "من فاز بجائزة أفضل لاعب في الدوري السعودي موسم 2024-2025؟" ✅ / "من أكثر لاعب تسجيلاً..." ✅ (measurable).
+- If removing the word leaves a complete question, remove it.
 
 ### C. Strict section relevance
 - The question must be ABOUT the section's subject — not merely mention it, take place in it, or involve someone from it.
@@ -239,7 +253,9 @@ Treat each pass as a fresh check — do not assume a row is correct because it p
 - Reject facts that are disputed or likely to change (rule 4).
 
 ### Pass 2 — Difficulty
+- Judge every row by the AUDIENCE: young Saudis (see Difficulty definitions). For each row ask: "Would most young Saudi players know this?" Don't rate as if the players were specialists or the general adult public. A fact young Saudis widely know (gaming, esports, football, recent Saudi events) cannot be 500 just because older people wouldn't know it.
 - Check the points match the difficulty definitions and reference examples.
+- Human corrections are the strongest calibration (human, 2026-10-16). In the first review of الدوري السعودي, the human changed the points of about 45 rows — 34 of them 300/500 → 100. Before Pass 2 on any section, read that section's human calibration notes in `sections.md` and rate in line with them.
 - Check the 100 / 300 / 500 levels in the batch are clearly different from each other.
 - Check a 500 question is hard because of knowledge, not confusing wording.
 - Check a 500 question is hard because few people RECALL the answer — not because the event is old. A 500 that is hard only because it is from the early 1900s (and nobody would know it however interested they are) is rejected or replaced.

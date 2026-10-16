@@ -19,6 +19,32 @@ History, geography, culture, landmarks, Vision 2030, notable facts about Saudi A
 ## 2. معلومات عامة
 Mixed general knowledge: science, inventions, records, everyday facts.
 
+## Football sections (3 كاس العالم، 4 الدوري السعودي، 5 الدوري الانجليزي) — shared rules
+From the human's review of الدوري السعودي (2026-10-16). Apply to all three football sections.
+
+**Pin the match** (CLAUDE.md Core rule B)
+- Two teams meet twice in a league season. Every question about a league match names the leg — ذهاب or إياب — plus the season. Alternatives that also pin it: the date, or the final score.
+- Cup and tournament matches: name the round (دور الـ16، نصف النهائي، النهائي...).
+- **A pinning score can itself be a leak (lead addition, 2026-10-16).** Before using a final score to pin a match, Grep the section's csv for that score. If another approved row's own answer or note already states that score for a similar matchup (e.g. "which two clubs beat النصر 3-1"), the score gives that answer away — pin by leg/date/round instead. Caught 2026-10-16: a رونالدو row pinned with "بفوز الهلال 3-1" leaked half of a different approved row's answer.
+
+**Section scope** — applies to all three football sections, not just الدوري السعودي
+- Each league section (الدوري السعودي، الدوري الانجليزي) is about its OWN league only: that league's matches, clubs, players' seasons in it, titles, scorers, transfers INTO it. كاس العالم is about the tournament itself — its matches, players, records.
+- Out of scope for a league section: a player's career, transfers, or matches in any OTHER league or country; a player's national-team appearances; anything that's really about كاس العالم or another competition.
+- Out of scope for كاس العالم: anything not about the match/tournament/players/records themselves (e.g. a country's domestic reaction to a result) — see the كاس العالم operational heuristics below.
+- Caught 2026-10-16: "من أول لاعب سعودي احترف في أوروبا؟" (سامي الجابر) was rejected for exactly this — a player's foreign pro career has nothing to do with the Saudi league, even though the fact is Saudi-flavored. The same test applies in الدوري الانجليزي to a player's career before/after the Premier League, and in كاس العالم to anything about a player's club career.
+
+**Difficulty — human calibration**
+Audience: young Saudis who follow football. In the first review, agents rated far too HIGH — about 35 rows marked 300/500 were really 100. Default lower:
+- **100** — what any young fan knows: champions, top scorers, famous signings and transfers, star players' clubs, results of big matches that trended, records everyone talked about.
+- **300** — needs following the league closely: the scorer of a specific league match between known clubs (human example: who scored Al-Nassr's goal against Al-Qadsiah in the 2025-26 second leg = 300), a specific match result from a past season, a mid-table detail.
+- **500** — almost no fan remembers it: assist makers, the scorer in a match between smaller clubs, the exact minute, substitutes, details from older seasons, second-place or third-place details.
+- Ask: "Would a young Saudi who watches the league every week know this without searching?" Yes → 100. Only if they paid close attention → 300. Almost none → 500.
+- **Match-scorer 300-vs-500 test (reviewer-dawri, proven over 5 batches, 2026-10-16).** This specific question shape — "who scored for [club] in [match]" — kept getting misjudged; writers kept aiming at "not a star player" instead of the real test, which is about the GOAL's role, not the scorer's fame:
+  - **300** — a big-four club's (الهلال، النصر، الاتحاد، الأهلي) ONLY goal, or the DECIDING goal, in a pinned league match, from the 2023-24 season onward.
+  - **500** — anything else in this shape: a smaller club's scorer, an own goal, a non-deciding goal in a big win (2nd/3rd goal of a blowout), or a match from 2022-23 or earlier.
+  - A star player's name does NOT make a goal 300 by itself — Ronaldo/Talisca/etc. scoring the 2nd goal of a 3-1 win is still 500, because the goal itself is forgettable even if the scorer isn't.
+  - **Extra condition: the scorer must not be the club's obvious star/fame guess for that goal (fame-leak test, same principle as كاس العالم's).** If a player's existing fame alone lets a player guess them as "probably who scored" without knowing the actual fact, it's 100, not 300 — e.g. بنزيما for الاتحاد's only goal, or محرز for a 1-0 derby winner. These are the cases the human already marked 100 (rows 268, 272, 276).
+
 ## 3. كاس العالم
 FIFA World Cup history — men's tournament only (human ruling, 2026-10-15). The FIFA Women's World Cup is out of scope here; no other section covers it either, so exclude it entirely rather than placing it elsewhere. Any question about records or "most ..." must state "up to [year/tournament]".
 
@@ -27,6 +53,8 @@ Saudi Pro League. Time-sensitive facts must include the season (e.g. "في مو�
 
 ## 5. الدوري الانجليزي
 Premier League. Same time-sensitive rule as الدوري السعودي.
+
+**Human-written base batch — frozen (human, 2026-10-16).** Lines 2–152 of `staging/الدوري الانجليزي.csv` (151 rows) are written and approved by the human directly, not by writer/reviewer. They are frozen: writer and reviewer must NOT edit, delete, reword, retier, or re-review them — leave them exactly as they are. They serve as the points/difficulty reference for every new الدوري الانجليزي question going forward (the same role the calibration examples play for other sections) — match their style and judge new rows' 100/300/500 tier against them. New rows are appended after line 152 and go through the normal pipeline.
 
 ## 6. دول و عواصم
 Countries and capitals. For countries with disputed or multiple capitals, either avoid them or state the official one clearly.
