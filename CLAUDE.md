@@ -12,12 +12,17 @@ Each question has: section, question, answer, points (100 / 300 / 500).
 ## Files
 - `sections.md` — the list of sections (provided by the human). Do not add or rename sections.
 - `staging/<section>.csv` — working file per section (encoding: utf-8-sig so Arabic opens correctly in Excel).
-  - Columns: `section, question, answer, points, question_image, answer_image, status, note`
+  - Columns: `section, question, answer, points, question_image, answer_image, question_video, answer_video, status, note`
   - `question_image` and `answer_image` are optional image URLs (leave empty if none).
+  - `question_video` and `answer_video` are optional clip FILENAMES, not paths or links (e.g. `ksa-500-017.mp4`) — see Video and audio rules. Leave empty if none.
   - `status` is one of: `pending`, `pass1_ok`, `pass2_ok`, `approved`, `flagged`
 - `questions.xlsx` — final output, built by lead with openpyxl from `approved` rows only.
-  - One sheet per section, columns: `السؤال | الجواب | النقاط | صورة السؤال | صورة الجواب | ملاحظات أو أجوبة مقبولة`, sorted by points. The 6th column carries the row's `note` for approved rows that have a host-relevant one (accepted variants, explicit wrong-but-tempting answers, disambiguation) — leave it empty when there's nothing host-critical.
+  - One sheet per section, columns: `السؤال | الجواب | النقاط | صورة السؤال | صورة الجواب | مقطع السؤال | مقطع الإجابة | ملاحظات أو أجوبة مقبولة`, sorted by points. The last column carries the row's `note` for approved rows that have a host-relevant one (accepted variants, explicit wrong-but-tempting answers, disambiguation) — leave it empty when there's nothing host-critical.
   - Plus a sheet `flagged` listing every flagged row with its note, for the human to decide.
+- `upload/<section>.csv` — also built by lead, one per section, from the same `approved` rows. This is the file the human uploads to the game's admin panel, so its format is fixed:
+  - encoding `utf-8-sig`, header row exactly: `question,answer,points,image,answer_image,video,answer_video`
+  - `points` is 100 / 300 / 500; empty cells stay empty. No status, note or section columns.
+- `media/<section>/` — every video file (and its poster image) used by that section. See Video and audio rules.
 
 ## Quantity
 - Minimum per section: 100 questions at 100 points, 100 at 300, 100 at 500 (300 total).
@@ -201,6 +206,47 @@ Images are optional — add one only when it genuinely helps the question or the
 4. A question image must not reveal the answer.
 5. The link must be checked and confirmed to load the correct image before approval.
 
+## Video and audio rules (optional)
+Clips are optional, like images — add one only when watching or hearing it IS the question (a goal, a celebration, a voice, a song intro, a sound). Never add a clip as decoration. Clips are for السؤال وجوابه only; حروف has none.
+
+**How the game uses them.** The CSV holds only the clip's filename. When the human uploads a section, they pick `upload/<section>.csv` AND all the files in `media/<section>/`; the admin panel matches each filename in the sheet to a file, compresses nothing, uploads them, and stores the links. A name in the sheet with no matching file, or two files with the same name, blocks the upload. So the filename is the only link between the row and the clip — get it exactly right.
+
+**Filenames**
+- Lowercase Latin letters, digits and hyphens only, then the extension: `ksa-500-017.mp4`. No spaces, no Arabic, no brackets.
+- Unique across the WHOLE project, not just the section: start every name with the section's short code (pick one per section and list it in `sections.md`), then the points, then a running number.
+- The answer clip of the same row adds `-a`: `ksa-500-017-a.mp4`.
+- A poster image (the still shown before play) has the SAME name with `.jpg`: `ksa-500-017.jpg`. The panel attaches it automatically. Always provide one.
+- In the CSV write the name only — never a path (`media/...`) and never a URL.
+
+**Video format** — the game plays these on phones and TVs, including iPhone Safari:
+- `.mp4`, video H.264 (`yuv420p`), audio AAC, with `faststart`. (`.webm` is accepted but avoid it; `.mov` / `.m4v` must be converted.)
+- Max 720p, 30 fps.
+- Length 5–15 seconds. Cut to the moment the question is about — no intros, logos or replays.
+- Size: aim for under 1 MB, keep under 3 MB. Files over 25 MB are refused by the upload.
+- Convert and make the poster with ffmpeg (one command each):
+  ```
+  ffmpeg -i in.mov -ss START -t SECONDS -vf "scale='min(1280,iw)':-2,fps=30" -c:v libx264 -preset slow -crf 27 -pix_fmt yuv420p -c:a aac -b:a 96k -ac 1 -movflags +faststart ksa-500-017.mp4
+  ffmpeg -ss 1 -i ksa-500-017.mp4 -vframes 1 -vf scale=640:-2 -q:v 4 ksa-500-017.jpg
+  ```
+  If the sound is not part of the question (or would give the answer away), drop it: replace `-c:a aac -b:a 96k -ac 1` with `-an`.
+- Check every file before marking the row: `ffprobe` shows `h264` + `aac` (or no audio), duration 5–15 s, and the size is under 3 MB.
+
+**Audio-only questions** (a voice, a song, a sound effect)
+- The game has no separate audio column. An audio question is delivered as an `.mp4` with a still picture over the sound, in the same `question_video` / `answer_video` column, with the same naming rules.
+- Build it from the sound file and a cover image:
+  ```
+  ffmpeg -loop 1 -i cover.jpg -i sound.mp3 -c:v libx264 -tune stillimage -pix_fmt yuv420p -vf "scale=1280:-2" -c:a aac -b:a 96k -ac 1 -shortest -movflags +faststart ksa-300-042.mp4
+  ```
+- The cover must not reveal the answer: use a neutral image (the section's logo, a plain colour, or a ❓). Use the same cover as the poster `.jpg`.
+- Length 5–15 seconds, like video. Start on the part that is asked about.
+
+**Content**
+- The question clip must not reveal the answer: no on-screen names, captions, scoreboards, jersey names or commentary that says it. Cut or crop them out, or mute the commentary. Run the cover test on the clip as well as the text.
+- The answer clip (optional) shows or says the answer.
+- The question text still has to work: it says what to watch or listen for ("من سجّل هذا الهدف؟", "لمن هذا الصوت؟") and follows every question rule. The clip replaces a description; it does not replace the question.
+- Record where each clip came from in `note` (link + timestamp). Use only material the project may use; no clips with a visible watermark of another channel.
+- reviewer checks each clip in Pass 3 like an image: the file exists in `media/<section>/`, the name in the CSV matches it exactly, it plays, shows the right moment, and does not leak the answer.
+
 ## Token efficiency (human, 2026-10-15)
 These rules cut cost without lowering quality. Follow them on every batch.
 
@@ -271,4 +317,5 @@ Treat each pass as a fresh check — do not assume a row is correct because it p
 - No duplicates or rephrased duplicates across `staging/*.csv` — checked with Grep (see Token efficiency), not by reading the files.
 - Questions are spread across the section's topic, not clustered.
 - Images (if any): link loads, shows the right thing, follows the image rules, and the question image doesn't reveal the answer.
+- Clips (if any): the file is in `media/<section>/` under exactly the name in the row, passes the format check, plays the right moment, and the question clip doesn't reveal the answer (see Video and audio rules).
 - Scope (second check, after rewording): the row is still centrally about its section per Core rule C and sections.md — not a general fact that merely happens to be located in, or involve someone from, the section's subject. (For السعودية: a Saudi landmark, object, practice or person, not a general fact that happens to be on Saudi territory.)

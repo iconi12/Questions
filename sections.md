@@ -130,10 +130,12 @@ Well-known Saudi restaurants and chains.
 - Every question is verified with search.
 
 ## 25. سيارات
-Identify the car from media. Every row is one of three formats — no text-only questions:
+Section code for media filenames: `car`.
+Identify the car from media. Every row is one of four formats — no text-only questions:
 - **Exterior photo** — `question_image` shows the outside of the car with every brand mark hidden.
 - **Interior photo** — `question_image` shows the cabin (dashboard, steering wheel, seats, console) with every brand mark hidden.
-- **Sound** — `question_audio` holds a clip of the car (engine, exhaust, start-up).
+- **Sound** — `question_audio` holds a clip of the car (engine, exhaust, start-up). (Note: CLAUDE.md's general video/audio rules deliver audio-only questions as an `.mp4` with a still cover, in `question_video` — follow CLAUDE.md's audio-only build method; `question_audio` here is kept only as the section's own historical column name for that same clip.)
+- **Video** — `question_video` holds a short clip (driving shot, a distinctive feature or sound in motion, start-up) built per CLAUDE.md's Video and audio rules (filename, format, length, media/ storage). Every brand mark visible in the frame must be hidden/cropped exactly like a photo row — same method and same check.
 
 **What the question asks**
 - The question says exactly what is asked:
@@ -151,18 +153,19 @@ Identify the car from media. Every row is one of three formats — no text-only 
 - writer opens the edited image (Read tool) and checks it, zooming into crops where needed. reviewer repeats this independently in Pass 3. One visible mark = fail.
 - If hiding the marks leaves too little to recognise the car, choose a different photo.
 
-**Image source and storage** (overrides CLAUDE.md image rules 1–2 for this section)
+**Image source and storage**
 - Source photos from Wikimedia Commons only (licensed for reuse). Put the original Commons file page URL in note, for attribution.
-- `question_image` holds the local path of the edited file (`media/cars/...`), not a URL.
+- `question_image`, like every other section, holds a direct https:// link — never a local path (human ruling, 2026-10-20: images are always a URL, project-wide; `media/<section>/` is for video/audio clip files only, matched by filename through the admin panel — see Video and audio rules).
+- Because the edited (marks-masked) file is a new file that doesn't exist anywhere public, writer must publish it to get that URL: save it to `media/cars/<brand>-<model>-<ext|int>-<n>.jpg` as before, then `git add`/`git commit`/`git push` that file to `origin/master`, then set `question_image` to `https://raw.githubusercontent.com/iconi12/Questions/master/media/cars/<same filename>`. After pushing, fetch the raw URL once to confirm it actually resolves before marking the row done.
 - `answer_image` (optional): direct link to the original, unedited Commons photo, for the reveal.
 - Pass 1 verifies the photo really shows the stated model and generation — Commons descriptions are sometimes wrong (facelifts, twins, mislabelled uploads). Confirm with a second source if there's any doubt.
 
 **Sound rows**
-- Extra column for this section only: `question_audio` — in the staging CSV after `answer_image`; in the xlsx sheet as `صوت السؤال`.
+- No separate column — built as an audio-only `.mp4` per CLAUDE.md's Video and audio rules (still cover + sound, same `question_video`/`answer_video` columns and naming convention as a normal video row). The cover must be a neutral image (not a photo of the car) since the car itself is what's being guessed.
 - Only cars with a genuinely distinctive sound. Most cars sound alike, so sound rows are a minority and do not count toward any quota — write only the truly identifiable ones.
 - Source: a direct audio file (.ogg / .mp3 / .wav) from Wikimedia Commons is preferred. A YouTube link is allowed only with an exact start time (`?t=`), the end second in note, and "لا تُعرض الشاشة" in note — the video title would reveal the answer.
 - The clip must contain no speech or on-screen text naming the car.
-- Agents cannot listen to audio. Sound rows are judged on the source's description only, and every sound row gets "يحتاج سماع" in note. lead adds a sheet `audio_check` to questions.xlsx listing all sound rows for the human to check.
+- Agents cannot listen to audio. Sound rows are judged on the source's description only, and every sound row gets "يحتاج سماع" in note. lead adds a sheet `audio_check` to questions.xlsx listing all sound/video rows for the human to check.
 
 **Difficulty**
 - 100 — cars common on Saudi roads or iconic worldwide, exterior photo, brand or brand + model (e.g. a current Land Cruiser).
