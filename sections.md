@@ -192,6 +192,14 @@ The HBO TV series only (8 seasons, 2011–2019).
 - Core rule D's era quotas don't apply here.
 
 ## 27. هاري بوتر (Harry Potter)
+Video/image filename code: `hp`
+
+**Media quota (human, 2026-10-21):** across the section's 300 rows, include 12 rows with a `question_image` and 12 rows with a `question_video` — 4 images and 4 videos at EACH point tier (100/300/500). These count toward the normal 100-per-tier totals, they are not extra rows on top.
+- Images and video clips do NOT need masking/blurring/editing — they show the scene/character as-is. A video clip still needs trimming to the right moment/length (5–15s) per the standing Video and audio rules, and must not show the answer (e.g. a "what did X say after this" clip ends BEFORE the line is said).
+- Image question style: "من هذا؟" (a character) or "ماذا حدث هنا؟ / وش صار هنا؟" (a scene/moment) — picture must not give the answer away by itself beyond what the question asks.
+- Video question style: "وش قال هاري بعد هذي اللقطة؟" (what did a character say right after this clip), "وش سبب هذا الحدث؟" (what caused this event), "وش سوت هيرمايني هنا؟" (what did a character do here), or similar — the clip is the question's "description", the question text still must follow all question rules (one answer, no hints).
+- Sourcing: film stills/clips are copyrighted, unlike sports broadcast highlights — follow the Image rules strictly (Wikimedia Commons preferred; the Harry Potter wiki may host stills but verify they're stable, direct image links). For video, check `media/هاري بوتر/raw/` first; if it's empty, flag to lead before sourcing clips from elsewhere — don't assume the same sourcing approach as the football sections' match highlights applies to studio film footage.
+
 The 8 Harry Potter films only (2001–2011).
 - Not the books, not Fantastic Beasts, not The Cursed Child, not the HBO series.
 - Where the films differ from the books, the film's version is the answer. Book-only characters, scenes and details (e.g. Peeves) are out of scope.
