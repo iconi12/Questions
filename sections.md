@@ -50,6 +50,7 @@ FIFA World Cup history — men's tournament only (human ruling, 2026-10-15). The
 
 ## 4. الدوري السعودي
 Saudi Pro League. Time-sensitive facts must include the season (e.g. "في موسم 2023-2024").
+Media filename code: `spl`.
 
 ## 5. الدوري الانجليزي
 Premier League. Same time-sensitive rule as الدوري السعودي.
