@@ -186,6 +186,13 @@ Converged on by writer and reviewer through 158 approved rows (2026-10-01). Thes
 - When the answer to this style of question is a small set of multiple people (e.g. 2 players who both missed), that's fine and is NOT an "X or Y" violation of rule 2 — rule 2 bars uncertain/alternative answers, not a complete, exact, verifiable set. Keep the set small (2-3 max) and make sure every name in it is independently verified.
 - Apply this going forward on any NEW or backfill 500-point كاس العالم rows (including ones you write to replace a count lost from this resweep) — don't reopen already-approved 500s just to diversify them, that's optional polish, not a structural fix.
 
+### Movie/TV-series/game sections (human, 2026-10-22) — applies to هاري بوتر، صراع العروش، ون بيس، هجوم العمالقة، ناروتو، بيتر كول ساول، بريكنغ باد، ذا بويز، إنفينسبل، مارفل، سيد الخواتم، ألعاب الفيديو، إلدن رينغ، ديزني وبيكسار، فرندز، سبونج بوب، سبيستون، كول أوف ديوتي بلاك أوبس زومبيز، مسلسلات رمضانية، دريم وركس, and any future section of this kind
+
+**Question-form variety:** reading finished output, the human found too many rows asking "ما اسم..." (what is the name of...) and not enough asking about events, speech or actions. Write noticeably more rows as "ماذا حدث؟ / وش صار؟" (what happened), "ماذا قال...؟ / وش قال...؟" (what a character said), and "من فعل...؟" (who did something) — not just naming things. These event/action forms should clearly outnumber "ما اسم" rows in a section's output, not just appear occasionally alongside them. This is a going-forward instruction for new rows; it is not a reason to rewrite or delete rows already written or approved under the older mix. Reviewer: when checking a batch's spread (rule 6), also weigh its mix of question forms, not just its topic spread, and flag a batch where naming questions dominate.
+
+**Answer format — Arabic + English for names (human, 2026-10-21/22):** when an answer is a name or title (character, person, place, spell, object, film/book/episode title) that has an established English form, put the English right in the answer field after the Arabic — e.g. "عباءة الإخفاء Invisibility Cloak", "يجب ألا أكذب I must not tell lies". The same applies to an EXACT line actually spoken on screen in the original language. It does NOT apply to a plain description, action or paraphrase of what happens, even one that's easy to translate — "أن يأكلوهما Eat them" and "ترتد عليه فيفقد ذاكرته Spell backfires" are both wrong, invented glosses of a summary, not names or real quotes. Test before adding English: would a fan recognize this exact text as the thing's actual established name, or as a line really said on screen? If you're translating/summarizing rather than citing something established, leave English out. This was first discovered as an over-correction in هاري بوتر (English got added to generic nouns like "Dragon" and "Cat", and to descriptions, before being caught and reversed) — apply the tightened version from the start in any new movie/series section.
+**Judge the ANSWER, never the question (human, 2026-10-22):** a second over-correction pattern in هاري بوتر: English was added because the QUESTION mentioned a name or character, even when the ANSWER itself wasn't a name/title/quote. The question's content is irrelevant to this rule — a question can be packed with proper nouns while its answer is a plain description, and that answer still gets no English. Judge only what the answer text itself is, every time, independent of what the question asks about.
+
 ## Question rules
 1. Arabic (فصحى بسيطة), clear wording, only one possible interpretation.
 2. One correct answer, short (1–4 words). No "X or Y" answers.
@@ -206,6 +213,7 @@ Images are optional — add one only when it genuinely helps the question or the
 3. No images from social media, news sites, or search-result thumbnails — those links break.
 4. A question image must not reveal the answer.
 5. The link must be checked and confirmed to load the correct image before approval.
+6. **(human, 2026-10-22) If the question image is edited/masked in any way** (cropped to hide a logo, blurred, watermark removed, etc. — this does not include a normal unedited photo), `answer_image` must be the raw, unedited version of that same image, so the answer visibly matches what was hidden. If the question image needs no editing, `answer_image` is optional as usual.
 
 ## Video and audio rules (optional)
 Clips are optional, like images — add one only when watching or hearing it IS the question (a goal, a celebration, a voice, a song intro, a sound). Never add a clip as decoration. Clips are for السؤال وجوابه only; حروف has none.
@@ -243,7 +251,7 @@ Clips are optional, like images — add one only when watching or hearing it IS 
 
 **Content**
 - The question clip must not reveal the answer: no on-screen names, captions, scoreboards, jersey names or commentary that says it. Cut or crop them out, or mute the commentary. Run the cover test on the clip as well as the text.
-- The answer clip (optional) shows or says the answer.
+- **(human, 2026-10-22) If a row has a `question_video`, it must have an `answer_video`** that shows or says the answer — no longer optional. The answer clip doesn't need masking/editing; it's there to visibly confirm the answer after the question clip.
 - The question text still has to work: it says what to watch or listen for ("من سجّل هذا الهدف؟", "لمن هذا الصوت؟") and follows every question rule. The clip replaces a description; it does not replace the question.
 - Record where each clip came from in `note` (link + timestamp). Use only material the project may use; no clips with a visible watermark of another channel.
 - reviewer checks each clip in Pass 3 like an image: the file exists in `media/<section>/`, the name in the CSV matches it exactly, it plays, shows the right moment, and does not leak the answer.
