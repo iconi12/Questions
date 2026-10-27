@@ -92,6 +92,16 @@ Cutting hints must never leave the question open to more than one answer.
 - In historical sections, a 500 should be a precise detail of a known event (who commanded, where exactly, how many) rather than an obscure event almost nobody has heard of.
 - Reminder: "small set of people" answers (e.g. the 2 players who missed in a shootout) are allowed — see the كاس العالم notes on rule 2.
 
+### E. Every approved row needs an answer proof image or video (human, 2026-10-27)
+Every approved row — whether or not it has a `question_image`/`question_video` — must have an `answer_image` (or `answer_video` if a still image can't fully show it) that visibly PROVES the answer, not just illustrates the topic. The point: when a player disputes the answer, the host shows this image/clip and the argument is settled on sight.
+- The test: does this specific image/clip show the exact fact being asked, not just the general subject? A generic photo of a person or place is not proof on its own — it must show the actual thing that makes the answer correct.
+  - Example (صراع العروش, "من طعن روب ستارك في القلب؟" → روز بولتون): a plain photo of Roose Bolton isn't enough — many players will argue about it. The proof image must show the actual stabbing moment (a still from that scene), because the specific act, not just the person, is what's being disputed.
+  - Example (السعودية, a quote/statement question): a text citation or a line saying who said it is not proof. Find an actual picture of the moment — ideally a news photo that already has the exact quote captioned/overlaid on it (a "quote card"-style edited image), not just an article that mentions the quote in passing.
+- If a single still can't fully capture the proof (the fact is an action, sequence, or something a freeze-frame can't show clearly), use `answer_video` instead — a short clip of the actual moment.
+- This replaces the old "optional" framing for `answer_image`/`answer_video` specifically. `question_image`/`question_video` stay optional as before — add one only when it helps ask the question (see Image rules / Video and audio rules below). `answer_image` or `answer_video` is no longer optional for any row.
+- **Sourcing exception for proof images, `answer_image` only:** Image rule 3 bans news-site images because those links break. For a proof image specifically, a news site is allowed when it's the best or only source that actually shows/captions the moment (e.g. a quote-card image a news outlet published). Because the link will break, download it, save it to `media/<section>/`, and publish it the same way سيارات publishes its edited photos — `git add`/`commit`/`push` to `origin/master`, then set `answer_image` to the resulting `https://raw.githubusercontent.com/...` URL — so the proof stays reachable. `question_image`, when a row has one, still follows Image rule 3 unchanged; this exception is only for the answer-proof image.
+- Applies going forward to every section and every row. Existing approved rows across the project don't have this yet — bringing them into compliance is a separate, later resweep; this rule alone doesn't start one.
+
 ## Calibration (first section only)
 Before mass writing, writer produces 5 questions per level for the first section and stops.
 The human approves or adjusts them; the approved ones are pasted below as the reference for all sections.
@@ -206,17 +216,17 @@ Converged on by writer and reviewer through 158 approved rows (2026-10-01). Thes
 9. The question must be centrally about its section (Core rule C).
 10. 500 questions follow the mix in Core rule D.
 
-## Image rules (optional)
-Images are optional — add one only when it genuinely helps the question or the answer.
+## Image rules
+`question_image` is optional — add one only when it genuinely helps ask the question. `answer_image` is NOT optional — see Core rule E, every approved row needs one (or an `answer_video`) as proof of the answer.
 1. Must be a direct link to the image file (ends in .jpg / .png / .svg / .webp), not a page that contains it.
 2. Prefer stable sources: Wikimedia Commons (`upload.wikimedia.org`). For country flags, `flagcdn.com` is also fine.
 3. No images from social media, news sites, or search-result thumbnails — those links break.
 4. A question image must not reveal the answer.
 5. The link must be checked and confirmed to load the correct image before approval.
-6. **(human, 2026-10-22) If the question image is edited/masked in any way** (cropped to hide a logo, blurred, watermark removed, etc. — this does not include a normal unedited photo), `answer_image` must be the raw, unedited version of that same image, so the answer visibly matches what was hidden. If the question image needs no editing, `answer_image` is optional as usual.
+6. **(human, 2026-10-22) If the question image is edited/masked in any way** (cropped to hide a logo, blurred, watermark removed, etc. — this does not include a normal unedited photo), `answer_image` must be the raw, unedited version of that same image, so the answer visibly matches what was hidden. If the question image needs no editing, `answer_image` still follows Core rule E (every row needs an answer-proof image or video) — it's just no longer specifically required to be "the same image unedited."
 
-## Video and audio rules (optional)
-Clips are optional, like images — add one only when watching or hearing it IS the question (a goal, a celebration, a voice, a song intro, a sound). Never add a clip as decoration. Clips are for السؤال وجوابه only; حروف has none.
+## Video and audio rules
+`question_video` is optional, like `question_image` — add one only when watching or hearing it IS the question (a goal, a celebration, a voice, a song intro, a sound). Never add a question clip as decoration. `answer_video` is NOT optional whenever an answer needs proof that a still image can't fully show — see Core rule E. Clips are for السؤال وجوابه only; حروف has none.
 
 **How the game uses them.** The CSV holds only the clip's filename. When the human uploads a section, they pick `upload/<section>.csv` AND all the files in `media/<section>/`; the admin panel matches each filename in the sheet to a file, compresses nothing, uploads them, and stores the links. A name in the sheet with no matching file, or two files with the same name, blocks the upload. So the filename is the only link between the row and the clip — get it exactly right.
 
