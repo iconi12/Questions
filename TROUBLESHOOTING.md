@@ -36,9 +36,14 @@ This file is a running log of concrete problems agents have hit while working on
 **Fix:** Transcode the whole downloaded file to H.264 ONE TIME up front (`-c:v libx264 -preset fast -crf 20 ...`) before doing any further frame-accurate work on it.
 **Prevention:** After any yt-dlp download, check the video codec with `ffprobe`. If it's AV1, transcode to H.264 immediately before touching it with contact sheets or frame extraction — don't wait until something breaks.
 
-**Issue:** yt-dlp downloads video and audio as separate streams and does not auto-merge them without a system ffmpeg on PATH (there isn't one here by design).
-**Fix:** Download both streams (`-f "bv*[height<=720]+ba/b[height<=720]"`), then merge manually with the Streamlabs ffmpeg binary (`-c:v copy -c:a aac -b:a 128k`).
-**Prevention:** Always check for two separate output files (`.f398.mp4`-style video + `.f251.webm`-style audio) after a yt-dlp download and merge them before use.
+**Issue:** yt-dlp downloads video and audio as separate streams and does not auto-merge them without a system ffmpeg on PATH.
+**Fix (UPDATED 2026-10-30 — the "there isn't one by design" premise is gone):** a proper `ffmpeg`/`ffprobe`/`ffplay` is now installed system-wide (`winget install --id Gyan.FFmpeg -e`, binaries also copied to `C:\Users\Admin\bin\` so they work without a shell restart — see CLAUDE.md's Video and audio rules). yt-dlp's own merge should now work directly (`-f "bv*[height<=720]+ba/b[height<=720]" --merge-output-format mp4`); the manual two-stream download + Streamlabs-binary merge below is now a fallback only, for a session where this ffmpeg install is somehow missing.
+**Fix (fallback):** Download both streams (`-f "bv*[height<=720]+ba/b[height<=720]"`), then merge manually with the Streamlabs ffmpeg binary (`-c:v copy -c:a aac -b:a 128k`).
+**Prevention:** Check `ffmpeg -version` works before assuming you need the fallback. Only if it's genuinely missing, check for two separate output files (`.f398.mp4`-style video + `.f251.webm`-style audio) after a yt-dlp download and merge them before use.
+
+**Issue:** yt-dlp fails to download from YouTube with a "JS challenge"/signature-extraction error on some videos (YouTube's anti-bot JS puzzle).
+**Fix:** Add `--js-runtimes node --remote-components ejs:github` to the yt-dlp command.
+**Prevention:** Include these flags by default on any yt-dlp call against youtube.com in this project, not just after hitting the error.
 
 **Issue:** faster-whisper on GPU (`device='cuda'`) fails with `RuntimeError: Library cublas64_12.dll is not found`. CTranslate2 needs separate `nvidia-cublas-cu12`/`nvidia-cudnn-cu12` pip packages beyond what torch's own CUDA wheels provide, and that install can be extremely slow (~2MB/min at times).
 **Fix:** Don't block on it — use `device='cpu', compute_type='int8'` instead. CPU transcription of a short clip (under ~15s) is fast enough in practice (a few seconds) that the GPU path isn't worth waiting on.

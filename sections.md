@@ -126,6 +126,7 @@ Rules for all religious sections (19–22):
 - Write the source in `note` (e.g. "صحيح البخاري 6018" or the surah and ayah).
 - Avoid matters of scholarly disagreement.
 - Reviewer verifies EVERY question in these sections with search, including 100-point ones.
+- **Quran-page vs. hadith proof images (human, 2026-10-30):** when `answer_image` is a photographed Quran page and the proof is only 1–2 ayat on it, crop the image down to just those lines, or keep the full page but visibly highlight them — never leave a full page where the proving ayah isn't distinguished from the rest of the page's unrelated text (same principle as CLAUDE.md's Image rule 7 addendum: the proving element must be legible/identifiable, not buried). When the proof is instead a حديث, do the opposite — do NOT crop it; keep the whole hadith image/text intact so its full wording stays readable in context.
 
 ## 20. اكمل الحديث
 The question gives the beginning of a hadith; the answer is its ending.
